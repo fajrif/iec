@@ -28,11 +28,6 @@
 							<i class="ri-file-pdf-fill text-primary fs-22 me-2"></i>
 							<%= link_to report.file.filename, url_for(report.file), target: :_blank %>
 						<% end %>
-						<% if report.file_id.attached? %>
-							<br/>
-							<i class="ri-file-ppt-fill text-danger fs-22 me-2"></i>
-							<%= link_to report.file_id.filename, url_for(report.file_id), target: :_blank %>
-						<% end %>
 					</td>
 					<td>
 						<%= badge_category(report.report_type) %>

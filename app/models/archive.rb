@@ -8,7 +8,6 @@ class Archive < ApplicationRecord
 	scope :get_all_by_archive_type, ->(archive_type_id) { where("archive_type_id = ?", archive_type_id) }
 
 	has_one_attached :file, dependent: :purge
-	has_one_attached :file_id, dependent: :purge
 	belongs_to :archive_type
 
 	validates_presence_of :title
@@ -16,8 +15,6 @@ class Archive < ApplicationRecord
 
 	# => File
 	validates :file, attached: true, content_type: ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/msword'],
-										size: { less_than: 50.megabytes, message: 'File maximum 50MB' }
-	validates :file_id, content_type: ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/msword'],
 										size: { less_than: 50.megabytes, message: 'File maximum 50MB' }
 
 	def private?

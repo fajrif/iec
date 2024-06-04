@@ -8,7 +8,6 @@ class Report < ApplicationRecord
 	scope :recent_by_report_type, ->(report_type_id) { where("report_type_id = ?", report_type_id).first }
 
 	has_one_attached :file, dependent: :purge
-	has_one_attached :file_id, dependent: :purge
 	belongs_to :report_type
 
 	validates_presence_of :title
@@ -16,8 +15,6 @@ class Report < ApplicationRecord
 
 	# => File
 	validates :file, attached: true, content_type: ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/msword'],
-										size: { less_than: 50.megabytes, message: 'File maximum 50MB' }
-	validates :file_id, content_type: ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/msword'],
 										size: { less_than: 50.megabytes, message: 'File maximum 50MB' }
 
 	def private?

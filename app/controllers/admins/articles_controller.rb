@@ -60,18 +60,10 @@ class Admins::ArticlesController < Admins::BaseController
 		redirect_to admins_article_path(@article.id)
 	end
 
-	def delete_attachment_locale
-		if @asset = ActiveStorage::Attachment.find(params[:asset_id])
-			flash[:notice] = "Successfully delete attachment."
-			@article.file_id.purge
-		end
-		redirect_to admins_article_path(@article.id)
-	end
-
   private
 
   def params_article
-    params.require(:article).permit(:image, :title, :short_description, :content, :published_date, :status, :category_id, :meta_title, :meta_description, :file, :file_id)
+    params.require(:article).permit(:image, :title, :short_description, :content, :published_date, :status, :category_id, :meta_title, :meta_description, :file)
   end
 
   def set_article

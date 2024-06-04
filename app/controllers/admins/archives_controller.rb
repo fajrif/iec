@@ -52,18 +52,10 @@ class Admins::ArchivesController < Admins::BaseController
     redirect_to admins_archives_url, :notice => "Successfully destroyed archive."
   end
 
-	def delete_attachment
-		if @asset = ActiveStorage::Attachment.find(params[:asset_id])
-			flash[:notice] = "Successfully delete attachment."
-			@archive.file_id.purge
-		end
-		redirect_to admins_archive_path(@archive)
-	end
-
   private
 
   def params_archive
-		params.require(:archive).permit(:file, :file_id, :title, :short_description, :published_date, :status, :archive_type_id, :category_name, :private, :read_only)
+		params.require(:archive).permit(:file, :title, :short_description, :published_date, :status, :archive_type_id, :category_name, :private, :read_only)
   end
 
 	def set_archive

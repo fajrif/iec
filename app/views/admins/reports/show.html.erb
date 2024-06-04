@@ -16,17 +16,6 @@
 							<% end %>
 						</td>
 					</tr>
-					<% if @report.file_id.attached? %>
-					<tr>
-						<td><b>File (IND)</b></td>
-						<td>
-								<%= link_to @report.file_id.filename, url_for(@report.file_id), target: :_blank %>
-								<%= link_to delete_attachment_admins_report_path(@report.id, @report.file_id.id), :class => "ms-2 btn btn-danger btn-sm", :data => { :confirm => 'Are You sure want to delete this file?' }, :method => :delete do %>
-									<i class="ri-delete-bin-fill"></i>
-								<% end %>
-						</td>
-					</tr>
-					<% end %>
 					<tr>
 						<td><b>Title</b></td>
 						<td>

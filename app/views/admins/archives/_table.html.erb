@@ -31,11 +31,6 @@
 							<i class="ri-file-pdf-fill text-primary fs-22 me-2"></i>
 							<%= link_to archive.file.filename, url_for(archive.file), target: :_blank %>
 						<% end %>
-						<% if archive.file_id.attached? %>
-							<br/>
-							<i class="ri-file-ppt-fill text-danger fs-22 me-2"></i>
-							<%= link_to archive.file_id.filename, url_for(archive.file_id), target: :_blank %>
-						<% end %>
 					</td>
 					<td>
 						<%= badge_category(archive.archive_type) %>

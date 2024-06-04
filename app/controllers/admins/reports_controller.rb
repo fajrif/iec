@@ -52,18 +52,10 @@ class Admins::ReportsController < Admins::BaseController
     redirect_to admins_reports_url, :notice => "Successfully destroyed report."
   end
 
-	def delete_attachment
-		if @asset = ActiveStorage::Attachment.find(params[:asset_id])
-			flash[:notice] = "Successfully delete attachment."
-			@report.file_id.purge
-		end
-		redirect_to admins_report_path(@report)
-	end
-
   private
 
   def params_report
-		params.require(:report).permit(:file, :file_id, :title, :short_description, :published_date, :status, :report_type_id, :private, :read_only)
+		params.require(:report).permit(:file, :title, :short_description, :published_date, :status, :report_type_id, :private, :read_only)
   end
 
   def set_report

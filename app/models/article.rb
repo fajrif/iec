@@ -13,14 +13,11 @@ class Article < ApplicationRecord
 
 	has_one_attached :image, dependent: :purge
 	has_one_attached :file, dependent: :purge
-	has_one_attached :file_id, dependent: :purge
 	has_one :action_text_rich_text, class_name: 'ActionText::RichText', as: :record
 	belongs_to :category
 
 	# => File
 	validates :file, content_type: ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/msword'],
-										size: { less_than: 50.megabytes, message: 'File maximum 50MB' }
-	validates :file_id, content_type: ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/msword'],
 										size: { less_than: 50.megabytes, message: 'File maximum 50MB' }
 
 	validates :image, content_type: ['image/gif', 'image/png', 'image/jpg', 'image/jpeg'],

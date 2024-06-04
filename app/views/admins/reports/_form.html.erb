@@ -6,7 +6,6 @@
 					<%= f.error_notification %>
 					<fieldset>
 						<%= f.input :file, as: :file, input_html: { class: "mb-3", accept: 'application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/msword' } %>
-						<%= f.input :file_id, as: :file, label: 'File (IND)', input_html: { class: "mb-3", accept: 'application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/msword' } %>
 						<%= f.input :title, as: :string %>
 						<%= f.input :short_description, as: :string %>
 					</fieldset>

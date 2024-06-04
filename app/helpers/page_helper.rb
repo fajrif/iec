@@ -93,13 +93,6 @@ module PageHelper
 		else
 			# fallback to default :en file
 			file = obj.file
-			unless I18n.locale == I18n.default_locale
-				if I18n.locale == :id
-					if obj.file_id.attached?
-						file = obj.file_id
-					end
-				end
-			end
 			if obj.read_only?
 				pdfjs.minimal_path(file: rails_storage_proxy_path(obj.file))
 			else
