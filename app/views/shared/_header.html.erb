@@ -1,0 +1,52 @@
+<%- load_header_menu -%>
+<!-- start header -->
+<header class="header-with-topbar">
+	<!-- topbar -->
+	<div class="top-header-area background-transparent <%= @banner_text_color %> d-none d-lg-block padding-10px-tb padding-50px-x sm-w-50">
+		<div class="container-fluid">
+			<div class="row align-items-center m-0">
+				<div class="col-md-12 pe-lg-0 d-md-flex align-items-center justify-content-end">
+					<div class="btn-group dropdown-style-1">
+						<button type="button" class="btn text-uppercase dropdown-toggle sm-w-100" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<% if I18n.locale == :en %>
+								EN <span class="caret"></span>
+							<% elsif I18n.locale == :id %>
+								ID <span class="caret"></span>
+							<% end %>
+						</button>
+						<%= get_locale_current_page_route %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end topbar -->
+	<!-- start navigation -->
+	<nav class="navbar navbar-default bootsnav navbar-top <%= @nav_link_color %> header-light full-width-pull-menu background-transparent nav-box-width navbar-expand-lg">
+		<div class="container-xl nav-header-container">
+			<!-- start logo -->
+			<div class="center-logo">
+				<%= link_to root_path, class: "logo" do %>
+					<%= image_tag("logo-iec.png", class: get_default_logo("logo-dark"), alt: "AMMAN Mineral International") %>
+					<%= image_tag("logo2-iec.png", class: get_default_logo("logo-light"), alt: "AMMAN Mineral International") %>
+				<% end %>
+			</div>
+			<!-- end logo -->
+			<div class="col col-lg-12 no-padding-lr">
+				<%= render "shared/mobile_menu" %>
+				<%= render "shared/menus" %>
+				<div class="navbar-collapse collapse justify-content-between">
+					<ul class="nav navbar-nav text-normal w-40 md-w-100 text-sm-start justify-content-start" data-in="animate__fadeIn" data-out="animate__fadeOut">
+						<%= raw generate_navbar_menu(@right_menu) %>
+					</ul>
+					<ul class="nav navbar-nav text-normal w-40 md-w-100 text-sm-start justify-content-end" data-in="animate__fadeIn" data-out="animate__fadeOut">
+						<%= raw generate_navbar_menu(@left_menu) %>
+						<%= render "shared/search" %>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- end navigation -->
+</header>
+<!-- end header -->

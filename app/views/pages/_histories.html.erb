@@ -1,0 +1,23 @@
+<%- histories = History.all -%>
+<div class="container">
+	<ul class="timeline">
+		<% histories.each_with_index do |history, index| %>
+			<%- even = (index+1) % 2 == 0 -%>
+			<%- class_name = even ? '' : 'timeline-inverted' -%>
+			<%- align = even ? 'text-md-end' : '' -%>
+			<%- justify = even ? 'd-flex justify-content-md-end' : 'd-flex justify-content-md-start' -%>
+			<%- width = history.description.length <= 60 ? "w-50 sm-w-100" : "" -%>
+			<li class="<%= class_name %>">
+				<div class="timeline-badge"></div>
+				<div class="timeline-panel <%= align %>">
+					<div class="timeline-heading">
+						<h4 class="timeline-title"><%= history.name %></h4>
+					</div>
+					<div class="timeline-body <%= justify %>">
+						<div class="<%= width %>"><%= raw history.description %></div>
+					</div>
+				</div>
+			</li>
+		<% end %>
+	</ul>
+</div>

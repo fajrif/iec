@@ -1,0 +1,44 @@
+<!-- start image gallery style 01 section -->
+<div class="container-xl">
+	<div class="row">
+		<div class="col-lg-12 tab-style3">
+			<!-- start filter navigation -->
+			<ul class="nav nav-tabs portfolio-filter portfolio-filter-tab-1 justify-content-start font-weight-500 alt-font text-medium text-center margin-50px-bottom sm-margin-30px-bottom">
+				<li class="nav <%= 'active' unless params[:video] %>"><a href="javascript:void(0);" data-filter=".photo" class="nav-link text-medium-gray"><%= t('galleries.photos') %></a></li>
+				<li class="nav <%= 'active' if params[:video] %>"><a href="javascript:void(0);" data-filter=".video" class="nav-link text-medium-gray"><%= t('galleries.videos') %></a></li>
+			</ul>
+			<!-- end filter navigation -->
+		</div>
+	</div>
+</div>
+<!-- start filter content -->
+<div class="container-fluid">
+		<div class="row">
+				<div class="col-12 filter-content overflow-hidden">
+						<ul id="gallery_isotope" class="hover-option10 lightbox-portfolio portfolio-wrapper grid grid-loading grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-medium">
+								<li class="grid-sizer"></li>
+								<% Gallery.all.each do |gallery| %>
+									<!-- start portfolio item -->
+									<li class="grid-item <%= gallery.is_video? ? 'video' : 'photo' %> wow animate__zoomIn">
+										<a class="<%= gallery.is_video? ? "popup-youtube" : "gallery-link" %>" href="<%= gallery.is_video? ? gallery.video_url : cdn_image_url(gallery.image) %>" title="<%= gallery.title %>">
+											<figure class=" border-radius-8">
+													<div class="portfolio-img bg-black">
+														<%= image_tag cdn_image_url(gallery.thumbnail), alt: gallery.title if gallery.thumbnail.attached? %>
+													</div>
+													<figcaption>
+															<div class="portfolio-hover-main">
+																	<div class="portfolio-hover-box align-middle">
+																		<span class="font-weight-600 line-height-normal text-white-2 text-uppercase margin-5px-bottom d-block"><%= gallery.title %></span>
+																	</div>
+															</div>
+													</figcaption>
+											</figure>
+										</a>
+									</li>
+									<!-- end portfolio item -->
+								<% end %>
+						</ul>
+				</div>
+		</div>
+</div>
+<!-- end filter content -->

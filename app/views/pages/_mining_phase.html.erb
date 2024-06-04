@@ -1,0 +1,112 @@
+<div class="container-xl">
+	<div class="row padding-50px-tb wow animate__fadeIn">
+		<div class="col-12 col-lg-1 d-lg-flex">
+			<div class="text-rotate">
+				<h3 class="font-weight-320 text-uppercase text-flip mb-4"><%= snippet.title %></h3>
+			</div>
+		</div>
+		<div class="col-12 col-lg-8">
+			<% unless snippet.short_description.blank? %>
+				<div class="margin-50px-bottom sm-margin-30px-bottom">
+					<%= raw snippet.short_description %>
+				</div>
+			<% end %>
+		</div>
+		<div class="col-12 col-lg-11 offset-lg-1">
+			<div class="row">
+
+				<div class="col-lg-3 col-md-6 col-6 padding-20px-all border-bottom border-right">
+					<div class="margin-20px-tb">
+						<h6 class="font-weight-500 mb-3"><%= t('mining_phase.phase', value: 1) %></h6>
+						<span class="d-block line-height-28 mb-4">
+							1997 – 2003<br/>
+							<%= raw "#{t('mining_phase.bottom_elevation')}<br/>(#{t('mining_phase.mrl_desc')})" %>
+						</span>
+						<span>
+							+ 150 <%= t('mining_phase.mrl') %>
+						</span>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 col-6 padding-20px-all border-bottom border-right sm-border-end-0">
+					<div class="margin-20px-tb">
+						<h6 class="font-weight-500 mb-3"><%= t('mining_phase.phase', value: 2) %></h6>
+						<span class="d-block line-height-28 mb-4">
+							2003 – 2004<br/>
+							<%= raw "#{t('mining_phase.bottom_elevation')}<br/>(#{t('mining_phase.mrl_desc')})" %>
+						</span>
+						<span>
+							+ 60 <%= t('mining_phase.mrl') %>
+						</span>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 col-6 padding-20px-all border-bottom border-right">
+					<div class="margin-20px-tb">
+						<h6 class="font-weight-500 mb-3"><%= t('mining_phase.phase', value: 3) %></h6>
+						<span class="d-block line-height-28 mb-4">
+							2003 – 2006<br/>
+							<%= raw "#{t('mining_phase.bottom_elevation')}<br/>(#{t('mining_phase.mrl_desc')})" %>
+						</span>
+						<span>
+							- 75 <%= t('mining_phase.mrl') %>
+						</span>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 col-6 padding-20px-all border-bottom sm-border-end-0">
+					<div class="margin-20px-tb">
+						<h6 class="font-weight-500 mb-3"><%= t('mining_phase.phase', value: 4) %></h6>
+						<span class="d-block line-height-28 mb-4">
+							2003 – 2009<br/>
+							<%= raw "#{t('mining_phase.bottom_elevation')}<br/>(#{t('mining_phase.mrl_desc')})" %>
+						</span>
+						<span>
+							- 150 <%= t('mining_phase.mrl') %>
+						</span>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 col-6 padding-20px-all border-right sm-border-bottom">
+					<div class="margin-20px-tb">
+						<h6 class="font-weight-500 mb-3"><%= t('mining_phase.phase', value: 5) %></h6>
+						<span class="d-block line-height-28 mb-4">
+							2005 – 2012<br/>
+							<%= raw "#{t('mining_phase.bottom_elevation')}<br/>(#{t('mining_phase.mrl_desc')})" %>
+						</span>
+						<span>
+							- 180 <%= t('mining_phase.mrl') %>
+						</span>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 col-6 padding-20px-all border-right sm-border-end-0 sm-border-bottom">
+					<div class="margin-20px-tb">
+						<h6 class="font-weight-500 mb-3"><%= t('mining_phase.phase', value: 6) %></h6>
+						<span class="d-block line-height-28 mb-4">
+							2007 – 2017<br/>
+							<%= raw "#{t('mining_phase.bottom_elevation')}<br/>(#{t('mining_phase.mrl_desc')})" %>
+						</span>
+						<span>
+							- 315 <%= t('mining_phase.mrl') %>
+						</span>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 col-6 padding-20px-all border-right">
+					<div class="margin-20px-tb">
+						<h6 class="font-weight-500 mb-3"><%= t('mining_phase.phase', value: 7) %></h6>
+						<span class="d-block line-height-28 mb-4">
+							2010 – 2024<br/>
+							<%= raw "#{t('mining_phase.bottom_elevation')}<br/>(#{t('mining_phase.mrl_desc')})" %>
+						</span>
+						<span>
+							- 420 <%= t('mining_phase.mrl') %>
+						</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

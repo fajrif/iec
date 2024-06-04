@@ -1,0 +1,45 @@
+<%- load_footer_menu -%>
+<!-- start footer -->
+<footer class="footer-center-logo-dark cover-background text-white-2 padding-twenty-top padding-two-bottom sm-no-padding-bottom" style="background-image:url('<%= image_url("banners/bg-footer.png") %>');">
+	<div class="footer-widget-area padding-two-top padding-fifteen-bottom sm-padding-100px-top">
+		<div class="container-xl">
+			<div class="row row-cols-2 row-cols-lg-4 row-cols-sm-2">
+				<div class="col widget md-margin-30px-bottom sm-margin-10px-bottom text-start">
+					<!-- start logo -->
+					<%= link_to root_url, class: "margin-20px-bottom d-inline-block" do %>
+						<%= image_tag("logo2-iec.png", class: "footer-logo", alt: "AMMAN Mineral International") %>
+					<% end %>
+					<!-- end logo -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-xl">
+		<div class="row align-items-center">
+			<!-- start copyright -->
+			<div class="col-5 col-lg-4 col-md-4 col-sm-5 order-2 text-medium text-uppercase text-md-start">
+				<%= raw generate_footer_link(@footer_menu) %>
+			</div>
+			<!-- end copyright -->
+			<!-- start logo -->
+			<div class="col-12 col-lg-4 col-md-4 col-sm-12 order-1 order-md-2 text-start text-md-center text-lg-end sm-margin-50px-bottom">
+				<%= raw generate_footer_contact_us(@footer_menu) %>
+			</div>
+			<!-- end logo -->
+			<!-- start social media -->
+			<div class="col-7 col-lg-4 col-md-4 col-sm-7 order-3 text-end text-md-end">
+				<div class="social-icon-style-8 d-inline-block align-middle">
+					<ul class="large-icon mb-0">
+						<li><a class="facebook" href="<%= configatron.social_facebook_url %>" target="_blank"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+						<li><a class="twitter" href="<%= configatron.social_twitter_url %>" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+						<li><a class="instagram" href="<%= configatron.social_instagram_url %>" target="_blank"><i class="fa-brands fa-instagram me-0" aria-hidden="true"></i></a></li>
+						<li><a class="youtube" href="<%= configatron.social_youtube_url %>" target="_blank"><i class="fa-brands fa-youtube me-0" aria-hidden="true"></i></a></li>
+						<li><a class="linkedin" href="<%= configatron.social_linkedin_url %>" target="_blank"><i class="fa-brands fa-linkedin-in me-0" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end social media -->
+		</div>
+	</div>
+</footer>
+<!-- end footer -->

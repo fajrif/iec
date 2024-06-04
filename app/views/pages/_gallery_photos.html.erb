@@ -1,0 +1,42 @@
+<%- galleries = Gallery.photos.limit(configatron.max_galleries_data) -%>
+<div class="container-xl">
+	<div class="row justify-content-start">
+		<div class="col-lg-7 last-paragraph-no-margin">
+			<h3 class="font-weight-320 mb-2 text-uppercase"><%= snippet.title %></h3>
+			<p><%= snippet.short_description %></p>
+		</div>
+	</div>
+</div>
+<div class="container-xl no-padding-lr">
+	<div class="row justify-content-center">
+		<div class="col-lg-12 margin-50px-tb sm-margin-20px-tb">
+			<div class="gallery collection grid-loading">
+				<div class="swiper mySwiper1">
+					<div class="swiper-wrapper">
+						<% galleries.each do |gallery| %>
+							<div class="content sm-padding-five-lr swiper-slide sm-w-100">
+								<%= image_tag cdn_image_url(gallery.image.variant(resize_to_limit: [800,650])), alt: gallery.title %>
+								<div class="text-content text-uppercase sm-padding-ten-lr">
+									<a href="<%= cdn_image_url(gallery.image) %>" class="lightbox-group-gallery-item" title="<%= gallery.title.upcase %>">
+										<%= gallery.title %>
+									</a>
+								</div>
+							</div>
+						<% end %>
+					</div>
+					<div class="swiper-button-prev1 swiper-portfolio-prev swiper-button-black-highlight" tabindex="0" role="button">
+						<i class="iec-icon-left"></i>
+					</div>
+					<div class="swiper-button-next1 swiper-portfolio-next swiper-button-black-highlight" tabindex="0" role="button">
+						<i class="iec-icon-right"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-12 text-center">
+			<% if link_button = snippet.link_buttons.first %>
+				<%= render_link_text_url(link_button, "btn btn-medium btn-iec btn-rounded") %>
+			<% end %>
+		</div>
+	</div>
+</div>

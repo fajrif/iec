@@ -1,0 +1,47 @@
+<%- orientation = snippet.orientation -%>
+<% unless snippet.title.blank? %>
+<div class="container-xl">
+	<div class="row align-items-start">
+		<div class="col-lg-8 wow animate__fadeInLeft">
+			<h3 class="font-weight-320 text-uppercase margin-50px-bottom sm-margin-15px-bottom"><%= snippet.title %></h3>
+		</div>
+	</div>
+</div>
+<% end %>
+<div class="container-fluid">
+	<div class="row">
+		<% if orientation == 'left' %>
+			<div class="col-12 col-md-8 no-padding-lr wow animate__fadeIn">
+				<%= image_tag(cdn_image_url(snippet.image), class: "w-100") if snippet.image.attached? %>
+			</div>
+			<div class="col-12 col-md-4 wow animate__fadeInRight">
+				<% unless snippet.short_description.blank? %>
+					<div class="padding-five-lr sm-padding-one-lr">
+						<%= raw snippet.short_description %>
+					</div>
+				<% end %>
+				<% if link_button = snippet.link_buttons.first %>
+					<div class="col-md-12 text-center margin-30px-top sm-margin-15px-top">
+						<%= render_link_text_url(link_button, "btn btn-medium btn-iec btn-rounded") %>
+					</div>
+				<% end %>
+			</div>
+		<% else %>
+			<div class="col-12 col-md-4 wow animate__fadeInLeft">
+				<% unless snippet.short_description.blank? %>
+					<div class="padding-fifteen-lr sm-padding-one-lr">
+						<%= raw snippet.short_description %>
+					</div>
+				<% end %>
+				<% if link_button = snippet.link_buttons.first %>
+					<div class="col-md-12 text-center margin-30px-top sm-margin-15px-top">
+						<%= render_link_text_url(link_button, "btn btn-medium btn-iec btn-rounded") %>
+					</div>
+				<% end %>
+			</div>
+			<div class="col-12 no-padding-lr col-md-8 wow animate__fadeIn">
+				<%= image_tag(cdn_image_url(snippet.image), class: "w-100") if snippet.image.attached? %>
+			</div>
+		<% end %>
+	</div>
+</div>
