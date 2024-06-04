@@ -20,6 +20,18 @@
 						<td><b>Description</b></td>
 						<td><%= raw @address.complete_address %></td>
 					</tr>
+					<% unless @address.email1.blank? %>
+					<tr>
+						<td><b>Email 1</b></td>
+						<td><%= @address.email1 %></td>
+					</tr>
+					<% end %>
+					<% unless @address.email2.blank? %>
+					<tr>
+						<td><b>Email 2</b></td>
+						<td><%= @address.email2 %></td>
+					</tr>
+					<% end %>
 					<% unless @address.phone1.blank? %>
 					<tr>
 						<td><b>Phone 1</b></td>
