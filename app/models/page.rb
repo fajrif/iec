@@ -1,17 +1,16 @@
 class Page < ApplicationRecord
 	extend Mobility
-  translates :slug, :title, :meta_title, :meta_description
+  translates :meta_title, :meta_description
 
 	extend FriendlyId
 	include PublishedExtension
 
-  friendly_id :title, use: :mobility
+  friendly_id :title
 
 	default_scope { order(id: :asc) }
 
 	translates :content, backend: :action_text
 
-	has_one_attached :file, dependent: :purge
 	has_many :sections, dependent: :destroy
   has_many :snippets, through: :sections
 	belongs_to :banner_section, optional: true

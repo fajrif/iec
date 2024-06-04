@@ -60,6 +60,14 @@ class Admins::ArticlesController < Admins::BaseController
 		redirect_to admins_article_path(@article.id)
 	end
 
+	def delete_attachment_image
+		if @asset = ActiveStorage::Attachment.find(params[:asset_id])
+			flash[:notice] = "Successfully delete image."
+			@article.image.purge
+		end
+		redirect_to admins_article_path(@article.id)
+	end
+
   private
 
   def params_article

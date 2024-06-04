@@ -14,11 +14,7 @@ Rails.application.routes.draw do
 	# 	report_types, archive_types and member_types
 	# Amman::CustomRoutes.new(self)
 
-	# custom news all page
-	match "/news", :to => 'articles#index', via: :get, as: :news, id: "news"
-	match "(/:locale)/berita", :to => 'articles#index', via: :get, as: :berita, id: "berita"
-
-	scope "(:locale)", locale: /id/ do
+	scope "(:locale)", locale: /cn/ do
 		namespace :admins do
 			root :to => 'dashboard#index'
 			get "account/change_password" => "accounts#change_password", :as => :change_password
@@ -37,7 +33,7 @@ Rails.application.routes.draw do
 			resources :articles do
 				member do
 					delete "delete_attachment/:asset_id" => "articles#delete_attachment", :as => :delete_attachment
-					delete "delete_attachment_locale/:asset_id" => "articles#delete_attachment_locale", :as => :delete_attachment_locale
+					delete "delete_attachment_image/:asset_id" => "articles#delete_attachment_image", :as => :delete_attachment_image
 				end
 			end
 			resources :categories
@@ -45,18 +41,10 @@ Rails.application.routes.draw do
 			resources :members
 			resources :member_types
 			resources :portfolios
-			resources :reports do
-				member do
-					delete "delete_attachment/:asset_id" => "reports#delete_attachment", :as => :delete_attachment
-				end
-			end
+			resources :reports
 			resources :report_types
 			resources :investor_inquiries, :only => [:index, :show, :destroy]
-			resources :archives do
-				member do
-					delete "delete_attachment/:asset_id" => "archives#delete_attachment", :as => :delete_attachment
-				end
-			end
+			resources :archives
 			resources :archive_types
 			resources :pages do
 				resources :sections, :controller => "pages/sections", :except => [:index] do
@@ -74,7 +62,6 @@ Rails.application.routes.draw do
 				resources :link_buttons, :controller => "snippets/link_buttons", :except => [:index, :show]
 				member do
 					delete "delete_attachment/:asset_id" => "snippets#delete_attachment", :as => :delete_attachment
-					delete "delete_attachment_locale/:asset_id" => "snippets#delete_attachment_locale", :as => :delete_attachment_locale
 				end
 			end
 			resources :addresses do

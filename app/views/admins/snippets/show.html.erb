@@ -36,27 +36,10 @@
 							</td>
 						</tr>
 						<% end %>
-						<% if @snippet.image_id.attached? %>
-						<tr>
-							<td><b>Image (IND)</b></td>
-							<td>
-									<%= image_tag @snippet.image_id.variant(resize_to_limit: [100,100]) %>
-									<%= link_to delete_attachment_locale_admins_snippet_path(@snippet.id, @snippet.image_id.id), :class => "ms-2 btn btn-danger btn-sm", :data => { :confirm => 'Are You sure want to delete this image?' }, :method => :delete do %>
-										<i class="ri-delete-bin-fill"></i>
-									<% end %>
-							</td>
-						</tr>
-						<% end %>
 						<tr>
 							<td><b>Title</b></td>
 							<td><h5 class="fs-14 mb-0 text-body"><%= @snippet.title %></h5></td>
 						</tr>
-						<% if @snippet.title_rotate? %>
-							<tr>
-								<td><b>Title Rotate</b></td>
-								<td><%= @snippet.title_rotate_label %></td>
-							</tr>
-						<% end %>
 						<% unless @snippet.title_tag.blank? %>
 						<tr>
 							<td><b>Title Tag</b></td>
@@ -68,12 +51,6 @@
 							<td><b>Caption</b></td>
 							<td><%= @snippet.caption %></td>
 						</tr>
-							<% if @snippet.caption_rotate? %>
-							<tr>
-								<td><b>Caption Rotate</b></td>
-								<td><%= @snippet.caption_rotate_label %></td>
-							</tr>
-							<% end %>
 						<% end %>
 						<tr>
 							<td><b>Short Description</b></td>
@@ -113,12 +90,6 @@
 						<tr>
 							<td><b>Orientation</b></td>
 							<td><%= @snippet.orientation %></td>
-						</tr>
-						<% end %>
-						<% unless @snippet.offset.zero? %>
-						<tr>
-							<td><b>Offset</b></td>
-							<td><%= @snippet.offset %></td>
 						</tr>
 						<% end %>
 						<% unless @snippet.bg_color.blank? %>

@@ -8,14 +8,11 @@ class Snippet < ApplicationRecord
 	validates_uniqueness_of :name
 
 	has_one_attached :image, dependent: :purge
-	has_one_attached :image_id, dependent: :purge
 	has_many :sections, dependent: :destroy
   has_many :pages, through: :sections
 	has_many :link_buttons, as: :linkable
 
 	validates :image, content_type: ['image/gif', 'image/png', 'image/jpg', 'image/jpeg'],
-										size: { less_than: 50.megabytes, message: 'Image maximum 50MB' }
-	validates :image_id, content_type: ['image/gif', 'image/png', 'image/jpg', 'image/jpeg'],
 										size: { less_than: 50.megabytes, message: 'Image maximum 50MB' }
 
 	acts_as_tree order: :id

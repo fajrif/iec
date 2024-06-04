@@ -52,18 +52,10 @@ class Admins::SnippetsController < Admins::BaseController
 		redirect_to admins_snippet_path(@snippet)
 	end
 
-	def delete_attachment_locale
-		if @asset = ActiveStorage::Attachment.find(params[:asset_id])
-			flash[:notice] = "Successfully delete image."
-			@snippet.image_id.purge
-		end
-		redirect_to admins_snippet_path(@snippet)
-	end
-
   private
 
   def params_snippet
-    params.require(:snippet).permit(:image, :image_id, :name, :title, :caption, :short_description, :description, :title_tag, :text_color, :template, :bg_color, :css_class, :css_title, :css_desc, :orientation, :video_url, :parent_id)
+    params.require(:snippet).permit(:image, :name, :title, :caption, :short_description, :description, :title_tag, :text_color, :template, :bg_color, :css_class, :css_title, :css_desc, :orientation, :video_url, :parent_id)
   end
 
 	def set_snippet

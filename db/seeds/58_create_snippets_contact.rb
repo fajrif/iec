@@ -12,17 +12,3 @@ contact_form.save
 
 Section.create(page_id: @contact_page.id, snippet_id: contact_form.id, css_class: "half-section")
 puts "Assign Snippet #{contact_form.name} to Contact"
-
-# create galleries
-galleries = Snippet.new(name: "galleries")
-galleries.save
-
-Section.create(page_id: @gallery_page.id, snippet_id: galleries.id)
-puts "Assign Snippet #{galleries.name} to Gallery"
-
-# create histories
-histories = Snippet.new(name: "histories")
-histories.save
-
-Section.create(page_id: @history_page.id, snippet_id: histories.id)
-puts "Assign Snippet #{galleries.name} to History"

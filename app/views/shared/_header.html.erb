@@ -9,9 +9,9 @@
 					<div class="btn-group dropdown-style-1">
 						<button type="button" class="btn text-uppercase dropdown-toggle sm-w-100" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<% if I18n.locale == :en %>
-								EN <span class="caret"></span>
-							<% elsif I18n.locale == :id %>
-								ID <span class="caret"></span>
+								English <span class="caret"></span>
+							<% elsif I18n.locale == :cn %>
+								Chinese <span class="caret"></span>
 							<% end %>
 						</button>
 						<%= get_locale_current_page_route %>

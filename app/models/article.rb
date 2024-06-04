@@ -1,9 +1,9 @@
 class Article < ApplicationRecord
 	extend Mobility
-  translates :slug, :title, :short_description, :meta_title, :meta_description
+  translates :title, :short_description, :meta_title, :meta_description
 
 	extend FriendlyId
-  friendly_id :title, use: :mobility
+  friendly_id :title
 
 	include PublishedExtension
 

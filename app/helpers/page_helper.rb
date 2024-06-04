@@ -113,13 +113,6 @@ module PageHelper
 	def get_locale_image_url(snippet)
 		# fallback to default :en image
 		img = snippet.image
-		unless I18n.locale == I18n.default_locale
-			if I18n.locale == :id
-				if snippet.image_id.attached?
-					img = snippet.image_id
-				end
-			end
-		end
 		cdn_image_url(img)
 	end
 

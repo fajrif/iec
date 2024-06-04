@@ -12,7 +12,6 @@ class Member < ApplicationRecord
 	validates :photo, attached: true, content_type: ['image/png', 'image/jpg', 'image/jpeg'],
 										size: { less_than: 10.megabytes, message: 'Image maximum 10MB' }
 	validates_presence_of :full_name, :job_title
-	validates_uniqueness_of :full_name
 
 	before_validation :init_order_no
 

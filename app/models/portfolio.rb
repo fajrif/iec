@@ -1,6 +1,6 @@
 class Portfolio < ApplicationRecord
 	extend Mobility
-  translates :description
+  translates :name, :description
 
 	include QuilleditorExtension
 

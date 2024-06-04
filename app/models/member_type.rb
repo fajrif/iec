@@ -1,9 +1,6 @@
 class MemberType < ApplicationRecord
 	extend Mobility
-  translates :slug, :name
-
-	extend FriendlyId
-  friendly_id :name, use: :mobility
+  translates :name
 
 	default_scope { order(id: :asc) }
 
@@ -13,7 +10,4 @@ class MemberType < ApplicationRecord
 	has_many :members
 	belongs_to :banner_section, optional: true
 
-	def should_generate_new_friendly_id?
-		self.name_changed?
-	end
 end
