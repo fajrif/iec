@@ -3,7 +3,7 @@ BannerSection.delete_all
 puts "create all banner sections"
 @bs1 = BannerSection.create(name: "Home")
 
-@bs2 = BannerSection.create(name: "About")
+@bs2 = BannerSection.create(name: "About Us")
 @bs3 = BannerSection.create(name: "Portfolio")
 @bs4 = BannerSection.create(name: "Sustainability")
 @bs5 = BannerSection.create(name: "Investor Relations")

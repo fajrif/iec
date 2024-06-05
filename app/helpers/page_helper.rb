@@ -110,12 +110,6 @@ module PageHelper
 		link_to(text, request_downloadable_file(object), options)
 	end
 
-	def get_locale_image_url(snippet)
-		# fallback to default :en image
-		img = snippet.image
-		cdn_image_url(img)
-	end
-
 	def load_header_menu
 		if data_menu = Menu.find_by(section: 1).try(:data)
 			@header_menu = JSON.parse(data_menu)

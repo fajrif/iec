@@ -1,4 +1,3 @@
-
 # create contact_info
 contact_info = Snippet.new(name: "contact_info")
 contact_info.save

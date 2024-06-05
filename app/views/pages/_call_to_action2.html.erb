@@ -31,7 +31,7 @@
 		<div class="row row-cols-1">
 			<!-- start features item -->
 			<div class="col no-padding-lr wow animate__fadeIn" data-wow-delay="0.2s">
-				<div class="cover-background <%= text_color %> padding-50px-all sm-padding-five-lr" style="background: transparent url('<%= cdn_image_url(snippet.image) if snippet.image.attached? %>')">
+				<div class="cover-background <%= text_color %> padding-50px-all sm-padding-five-lr" style="background: transparent url('<%= url_for(snippet.image) if snippet.image.attached? %>')">
 					<div class="container-xl sm-no-padding-lr d-flex flex-column justify-content-between">
 						<% if snippet.caption_rotate? %>
 						<div class="row <%= desc_height %>">
@@ -77,7 +77,7 @@
 		<div class="row row-cols-1">
 			<!-- start features item -->
 			<div class="col no-padding-lr wow animate__fadeIn" data-wow-delay="0.2s">
-				<div class="cover-background <%= text_color %> padding-50px-all sm-padding-five-lr" style="background: transparent url('<%= cdn_image_url(snippet.image) if snippet.image.attached? %>')">
+				<div class="cover-background <%= text_color %> padding-50px-all sm-padding-five-lr" style="background: transparent url('<%= url_for(snippet.image) if snippet.image.attached? %>')">
 					<div class="container-xl sm-no-padding-lr d-flex flex-column justify-content-between">
 						<div class="<%= desc_height %>">
 							<%= content_tag(header_tag.to_sym, snippet.title, class: "font-weight-320 text-uppercase margin-10px-bottom d-inline-block #{title_width}") %>
@@ -111,7 +111,7 @@
 		<div class="row row-cols-1">
 			<!-- start features item -->
 			<div class="col margin-20px-bottom wow animate__fadeIn" data-wow-delay="0.2s">
-				<div class="cover-background <%= text_color %> padding-50px-all sm-padding-five-lr barder-radius-8" style="background: transparent url('<%= cdn_image_url(snippet.image) if snippet.image.attached? %>')">
+				<div class="cover-background <%= text_color %> padding-50px-all sm-padding-five-lr barder-radius-8" style="background: transparent url('<%= url_for(snippet.image) if snippet.image.attached? %>')">
 					<h1 class="font-weight-320 text-uppercase margin-10px-bottom d-inline-block <%= title_width %>"><%= snippet.title %></h1>
 					<div class="d-flex gap-50 flex-row-reverse align-items-end h-250px <%= snippet.css_class %>">
 						<div class="<%= desc_width %>">

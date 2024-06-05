@@ -1,137 +1,29 @@
 {
   "right": [{
     "id": 1,
-    "label": "Who We Are",
-    "url": "/who-we-are",
-    "menu": [{
-      "id": 2,
-      "label": "Vision Mission",
-      "url": "/who-we-are#vision_mission"
-    }, {
-      "id": 3,
-      "label": "History",
-      "url": "/history"
-    }, {
-      "id": 4,
-      "label": "Directors",
-      "url": "/directors"
-    }, {
-      "id": 5,
-      "label": "Board of Commissioners",
-      "url": "/board-of-commissioners"
-    }, {
-      "id": 6,
-      "label": "Company Structure",
-      "url": "/who-we-are#company_structures"
-    }, {
-      "id": 7,
-      "label": "Awards and Recognitions",
-      "url": "/awards-and-recognitions"
-    }]
+    "label": "About Us",
+    "url": "/about-us"
   }, {
-    "id": 8,
-    "label": "Corporate Governance",
-    "url": "/corporate-governance",
-    "menu": [{
-      "id": 9,
-      "label": "General Meeting of Shareholders",
-      "url": "/general-meeting-of-shareholders"
-    }, {
-      "id": 11,
-      "label": "Articles of Association",
-      "url": "/articles-of-association"
-    }, {
-      "id": 12,
-      "label": "Materials",
-      "url": "/corporate-governance#materials"
-    }, {
-      "id": 13,
-      "label": "Corporate Secretary",
-      "url": "/corporate-secretary"
-    }, {
-      "id": 15,
-      "label": "Corporate Policies",
-      "url": "/corporate-policies"
-    }, {
-      "id": 14,
-      "label": "Whistleblowing",
-      "url": "/whistleblowing"
-    }]
+    "id": 2,
+    "label": "Portfolio",
+    "url": "/portfolio"
   }, {
-    "id": 16,
-    "label": "Business",
-    "menu": [{
-      "id": 17,
-      "label": "Amman Mineral Nusa Tenggara",
-      "url": "/amman-mineral-nusa-tenggara"
-    }, {
-      "id": 18,
-      "label": "Amman Mineral Integrasi",
-      "url": "/amman-mineral-integrasi"
-    }, {
-      "id": 19,
-      "label": "Amman Mineral Industri",
-      "url": "/amman-mineral-industri"
-    }, {
-      "id": 31,
-      "label": "Amman Nusantara Gas",
-      "url": "/amman-nusantara-gas"
-    }]
+    "id": 3,
+    "label": "Sustainability",
+    "url": "/sustainability"
+  }, {
+    "id": 4,
+    "label": "Contact Us",
+    "url": "/contact-us"
   }],
   "left": [{
-    "id": 20,
+    "id": 5,
     "label": "Investor Relations",
-    "url": "/investor-relations",
-    "menu": [{
-      "id": 21,
-      "label": "Annual Report",
-      "url": "/annual-report"
-    }, {
-      "id": 22,
-      "label": "Earnings Presentation",
-      "url": "/earnings-presentation"
-    }, {
-      "id": 23,
-      "label": "Earnings Release",
-      "url": "/earnings-release"
-    }, {
-      "id": 24,
-      "label": "Financial Statement",
-      "url": "/financial-statement"
-    }, {
-      "id": 25,
-      "label": "Prospectus",
-      "url": "/investor-relations#prospectus"
-    }, {
-      "id": 26,
-      "label": "Company Profile",
-      "url": "/investor-relations#company_profile"
-    }]
+    "url": "/investor-relations"
   }, {
-    "id": 25,
-    "label": "Sustainability",
-    "url": "/sustainability",
-    "menu": [{
-      "id": 26,
-      "label": "Sustainability Report",
-      "url": "/sustainability-report"
-    }, {
-      "id": 27,
-      "label": "Sustainability Strategy Framework",
-      "url": "/sustainability#sustainability_strategy_framework"
-    }, {
-      "id": 28,
-      "label": "Responsible Tailings Management",
-      "url": "/sustainability#tailings_management"
-    }, {
-      "id": 29,
-      "label": "ESG Steering Committee",
-      "url": "/sustainability#esg_steering_committee"
-    }]
-  }, {
-    "id": 30,
-    "label": "News",
-    "url": "/news"
+    "id": 6,
+    "label": "News & Media",
+    "url": "/press-release"
   }],
   "section": "header"
 }

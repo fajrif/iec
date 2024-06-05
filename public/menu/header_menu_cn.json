@@ -1,137 +1,29 @@
 {
   "right": [{
     "id": 1,
-    "label": "Tentang Kami",
-    "url": "/id/tentang-kami",
-    "menu": [{
-      "id": 2,
-      "label": "Visi & Misi",
-      "url": "/id/tentang-kami#vision_mission"
-    }, {
-      "id": 3,
-      "label": "Sejarah Perusahaan",
-      "url": "/id/sejarah"
-    }, {
-      "id": 4,
-      "label": "Direksi",
-      "url": "/id/direksi"
-    }, {
-      "id": 5,
-      "label": "Dewan Komisaris",
-      "url": "/id/dewan-komisaris"
-    }, {
-      "id": 6,
-      "label": "Struktur Perusahaan",
-      "url": "/id/tentang-kami#company_structures"
-    }, {
-      "id": 7,
-      "label": "Penghargaan & Pengakuan",
-      "url": "/id/penghargaan-dan-pengakuan"
-    }]
+    "label": "关于我们",
+    "url": "/cn/about-us"
   }, {
-    "id": 8,
-    "label": "Tata Kelola Perusahaan",
-    "url": "/id/tata-kelola-perusahaan",
-    "menu": [{
-      "id": 9,
-      "label": "Rapat Umum Pemegang Saham",
-      "url": "/id/rapat-umum-pemegang-saham"
-    }, {
-      "id": 11,
-      "label": "Anggaran Dasar",
-      "url": "/id/anggaran-dasar"
-    }, {
-      "id": 12,
-      "label": "Materi",
-      "url": "/id/tata-kelola-perusahaan#materials"
-    }, {
-      "id": 13,
-      "label": "Sekretaris Perusahaan",
-      "url": "/id/sekretaris-perusahaan"
-    }, {
-      "id": 15,
-      "label": "Kebijakan Perusahaan",
-      "url": "/id/kebijakan-perusahaan"
-    }, {
-      "id": 14,
-      "label": "Pelaporan Pelanggaran",
-      "url": "/id/pelaporan-pelanggaran"
-    }]
+    "id": 2,
+    "label": "文件夹",
+    "url": "/cn/portfolio"
   }, {
-    "id": 16,
-    "label": "Bisnis",
-    "menu": [{
-      "id": 17,
-      "label": "Amman Mineral Nusa Tenggara",
-      "url": "/id/amman-mineral-nusa-tenggara"
-    }, {
-      "id": 18,
-      "label": "Amman Mineral Integrasi",
-      "url": "/id/amman-mineral-integrasi"
-    }, {
-      "id": 19,
-      "label": "Amman Mineral Industri",
-      "url": "/id/amman-mineral-industri"
-    }, {
-      "id": 31,
-      "label": "Amman Nusantara Gas",
-      "url": "/id/amman-nusantara-gas"
-    }]
+    "id": 3,
+    "label": "可持续发展",
+    "url": "/cn/sustainability"
+  }, {
+    "id": 4,
+    "label": "联系我们",
+    "url": "/cn/contact-us"
   }],
   "left": [{
-    "id": 20,
-    "label": "Hubungan Investor",
-    "url": "/id/hubungan-investor",
-    "menu": [{
-      "id": 21,
-      "label": "Laporan Tahunan",
-      "url": "/id/laporan-tahunan"
-    }, {
-      "id": 22,
-      "label": "Presentasi Kinerja",
-      "url": "/id/presentasi-kinerja"
-    }, {
-      "id": 23,
-      "label": "Rilis Kinerja",
-      "url": "/id/rilis-kinerja"
-    }, {
-      "id": 24,
-      "label": "Laporan Keuangan",
-      "url": "/id/laporan-keuangan"
-    }, {
-      "id": 25,
-      "label": "Prospektus",
-      "url": "/id/hubungan-investor#prospectus"
-    }, {
-      "id": 26,
-      "label": "Profil Perusahaan",
-      "url": "/id/hubungan-investor#company_profile"
-    }]
+    "id": 5,
+    "label": "投资者关系",
+    "url": "/cn/investor-relations"
   }, {
-    "id": 25,
-    "label": "Keberlanjutan",
-    "url": "/id/keberlanjutan",
-    "menu": [{
-      "id": 26,
-      "label": "Laporan Keberlanjutan",
-      "url": "/id/laporan-keberlanjutan"
-    }, {
-      "id": 27,
-      "label": "Kerangka Strategi Keberlanjutan",
-      "url": "/id/keberlanjutan#sustainability_strategy_framework"
-    }, {
-      "id": 28,
-      "label": "Pengelolaan Tailings",
-      "url": "/id/keberlanjutan#tailings_management"
-    }, {
-      "id": 29,
-      "label": "Komite Pengarah ESG",
-      "url": "/id/keberlanjutan#esg_steering_committee"
-    }]
-  }, {
-    "id": 30,
-    "label": "Berita",
-    "url": "/id/berita"
+    "id": 6,
+    "label": "新闻媒体",
+    "url": "/cn/press-release"
   }],
   "section": "header"
 }

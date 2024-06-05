@@ -6,7 +6,7 @@ Page.delete_all
 puts "Create Page: #{@home_page.title}"
 
 # Create Page 2
-@about_page = Page.create(title: "About", banner_section: @bs2)
+@about_page = Page.create(title: "About Us", banner_section: @bs2)
 puts "Create Page: #{@about_page.title}"
 
 # Create Page 3

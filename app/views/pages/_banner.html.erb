@@ -5,7 +5,7 @@
 <% if banner.is_video? %>
 <section id="<%= banner.section_id %>" class="p-0 single-banner parallax">
 <% else %>
-<section id="<%= banner.section_id %>" class="p-0 single-banner parallax" data-parallax-background-ratio="0.5" style="background-image:url('<%= cdn_image_url(banner.image) if banner.image.attached? %>');">
+<section id="<%= banner.section_id %>" class="p-0 single-banner parallax" data-parallax-background-ratio="0.5" style="background-image:url('<%= url_for(banner.image) if banner.image.attached? %>');">
 <% end %>
 	<div class="full-screen <%= @banner_text_color %> md-landscape-h-580px">
 		<% if @banner_text_color == 'text-white-2' && !banner.is_video? %>
@@ -30,8 +30,8 @@
 			</div>
 		</div>
 		<%- if banner.is_video? -%>
-		<video class="htms-video" poster="<%= cdn_image_url(banner.image) if banner.image.attached? %>" autoplay loop muted playsinline>
-			<source type="<%= banner.video.content_type %>" src="<%= cdn_image_url(banner.video) %>">
+		<video class="htms-video" poster="<%= url_for(banner.image) if banner.image.attached? %>" autoplay loop muted playsinline>
+			<source type="<%= banner.video.content_type %>" src="<%= url_for(banner.video) %>">
 		</video>
 		<%- end -%>
 	</div>

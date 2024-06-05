@@ -122,7 +122,8 @@ module AdminHelper
 
 	def available_bg_colors
 		[
-			"bg-yellow",
+			"bg-green",
+			"bg-green-gradient",
 			"bg-grey",
 			"bg-dark-grey",
 			"bg-black"
