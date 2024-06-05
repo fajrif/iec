@@ -21,7 +21,7 @@ puts "Create Snippet: #{about_java_citarum.name}"
 java_citarum_map = Snippet.new(name: "java_citarum_map")
 java_citarum_map.template = "image_display"
 java_citarum_map.image.attach(io: Rails.root.join("vendor/assets/images/diagrams/java-citarum-map.png").open, filename: "java-citarum-map.png")
-mission.save
+java_citarum_map.save
 Section.create(page_id: @java_citarum_page.id, snippet_id: java_citarum_map.id, css_class: "small-section", order_no: 2)
 puts "Create Snippet: #{java_citarum_map.name}"
 
@@ -34,7 +34,7 @@ java_citarum_video.video_url = ""
 Mobility.with_locale(:cn) {
 	java_citarum_video.short_description = "Citarum 钻探的 4 口井的结果以及该区块的可用数据量是我们选择 Citarum 的关键因素，因为随着该地区天然气的发现，该区块的风险状况显着降低。"
 }
-mission.save
+java_citarum_video.save
 Section.create(page_id: @java_citarum_page.id, snippet_id: java_citarum_video.id, css_class: "small-section", order_no: 3)
 puts "Create Snippet: #{java_citarum_video.name}"
 

@@ -5,9 +5,9 @@ class PagesController < ApplicationController
 		begin
 			_id = params[:id]
 
-			if _id == 'id'
+			if _id == 'cn'
 				_id = "home"
-				I18n.locale = :id
+				I18n.locale = :cn
 			end
 
 			if @page = Page.friendly.find(_id)

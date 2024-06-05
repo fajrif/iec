@@ -31,10 +31,6 @@ class Admins::BaseController < ActionController::Base
 		unless GENERAL_CLASS_RESOURCES.include? controller_name
 			if INVESTOR_CLASS_RESOURCES.include? controller_name
 				authorize :investor
-			elsif MEDIA_CLASS_RESOURCES.include? controller_name
-				authorize :media
-			elsif PARTNER_CLASS_RESOURCES.include? controller_name
-				authorize :partner
 			elsif DEVELOPER_CLASS_RESOURCES.include? controller_name
 				authorize :developer
 			elsif ADMIN_CLASS_RESOURCES.include? controller_name

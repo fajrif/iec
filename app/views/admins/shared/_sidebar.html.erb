@@ -5,10 +5,10 @@
 		<!-- Light Logo-->
 		<a href="<%= root_path %>" class="logo logo-light">
 			<span class="logo-sm">
-				<%= image_tag('logo-icon.png', height: "42") %>
+				<%= image_tag('favicon.png', height: "42") %>
 			</span>
 			<span class="logo-lg">
-				<%= image_tag('logo2.png', height: "30") %>
+				<%= image_tag('logo.png', height: "50") %>
 			</span>
 		</a>
 		<button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
@@ -78,7 +78,7 @@
 								<a href="<%= admins_members_path %>" class="nav-link <%= current_path?('members') %>">Members</a>
 							</li>
 							<li class="nav-item">
-								<a href="<%= admins_subsidiaries_path %>" class="nav-link <%= current_path?('portfolios') %>">Portfolios</a>
+								<a href="<%= admins_portfolios_path %>" class="nav-link <%= current_path?('portfolios') %>">Portfolios</a>
 							</li>
 							<li class="nav-item">
 								<a href="<%= admins_galleries_path %>" class="nav-link <%= current_path?('galleries') %>">Gallery</a>

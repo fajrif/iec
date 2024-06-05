@@ -15,9 +15,9 @@
 				<%= f.input :message %>
 				<% if @show_recaptcha_v2 %>
 					<input type="hidden" value="true" name="investor_inquiry[use_v2]" id="investor_inquiry_use_v2">
-					<%= raw iec::Recaptcha.recaptcha_v2_render %>
+					<%= raw Iec::Recaptcha.recaptcha_v2_render %>
 				<% else %>
-					<%= raw iec::Recaptcha.recaptcha_execute('investor_inquiry') %>
+					<%= raw Iec::Recaptcha.recaptcha_execute('investor_inquiry') %>
 				<% end %>
 				<div class="col-12 margin-30px-top">
 					<button type="submit" class="btn btn-large btn-iec btn-rounded"><%= t('global.submit') %> <i class="iec-icon-right icon-very-small"></i></button>

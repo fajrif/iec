@@ -16,18 +16,6 @@
 							</td>
 						</tr>
 						<tr>
-							<td><b>Admin Media</b></td>
-							<td>
-								<%= @setting.admin_media %>
-							</td>
-						</tr>
-						<tr>
-							<td><b>Admin Partner</b></td>
-							<td>
-								<%= @setting.admin_partner %>
-							</td>
-						</tr>
-						<tr>
 							<td><b>Created At</b></td>
 							<td><%= @setting.try(:created_at).try(:strftime,'%d/%m/%Y %H:%M') %></td>
 						</tr>

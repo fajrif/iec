@@ -9,8 +9,6 @@
 				<!-- start tab navigation -->
 				<ul class="nav nav-tabs margin-30px-bottom sm-margin-10px-bottom text-uppercase alt-font text-medium font-weight-500 justify-content-start">
 					<li class="nav-item"><a class="text-medium-gray nav-link active" href="#tab-five1" data-bs-toggle="tab"><%= t('contacts.investor') %></a></li>
-					<li class="nav-item"><a class="text-medium-gray nav-link" href="#tab-five2" data-bs-toggle="tab"><%= t('contacts.journalist') %></a></li>
-					<li class="nav-item"><a class="text-medium-gray nav-link" href="#tab-five3" data-bs-toggle="tab"><%= t('contacts.partner') %></a></li>
 				</ul>
 				<!-- end tab navigation -->
 			</div>
@@ -20,24 +18,6 @@
 						<div class="row">
 							<div id="investorInquiryForm" class="col-12">
 								<%= render "investor_inquiries/form" %>
-							</div>
-						</div>
-					</div>
-					<!-- end tab content -->
-					<!-- start tab content -->
-					<div class="tab-pane fade in" id="tab-five2">
-						<div class="row">
-							<div id="journalistInquiryForm" class="col-12">
-								<%= render "journalist_inquiries/form" %>
-							</div>
-						</div>
-					</div>
-					<!-- end tab content -->
-					<!-- start tab content -->
-					<div class="tab-pane fade in" id="tab-five3">
-						<div class="row">
-							<div id="partnerInquiryForm" class="col-12">
-								<%= render "partner_inquiries/form" %>
 							</div>
 						</div>
 					</div>

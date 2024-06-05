@@ -7,14 +7,14 @@ class InvestorInquiriesController < ApplicationController
 		if @investor_inquiry.valid?
 
 			unless @investor_inquiry.use_v2.blank?
-				unless Amman::Recaptcha.verify_recaptcha_v2?(params['g-recaptcha-response'], 'investor_inquiry')
+				unless Iec::Recaptcha.verify_recaptcha_v2?(params['g-recaptcha-response'], 'investor_inquiry')
 					flash[:alert] = t('global.recaptcha_failed')
 					@show_recaptcha_v2 = true
 				else
 					create_data
 				end
 			else
-				unless Amman::Recaptcha.verify_recaptcha?(params[:recaptcha_token], 'investor_inquiry')
+				unless Iec::Recaptcha.verify_recaptcha?(params[:recaptcha_token], 'investor_inquiry')
 					flash[:alert] = t('global.recaptcha_failed')
 					@show_recaptcha_v2 = true
 				else

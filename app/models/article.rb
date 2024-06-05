@@ -3,7 +3,7 @@ class Article < ApplicationRecord
   translates :title, :short_description, :meta_title, :meta_description
 
 	extend FriendlyId
-  friendly_id :title
+  friendly_id :name, use: :slugged
 
 	include PublishedExtension
 
@@ -22,11 +22,11 @@ class Article < ApplicationRecord
 
 	validates :image, content_type: ['image/gif', 'image/png', 'image/jpg', 'image/jpeg'],
 										size: { less_than: 50.megabytes, message: 'Image maximum 50MB' }
-	validates_presence_of :title
-	validates_uniqueness_of :title
+	validates_presence_of :name, :title
+	validates_uniqueness_of :title, :name
 
 	def should_generate_new_friendly_id?
-		self.title_changed?
+		self.name_changed?
 	end
 
 	def self.most_recent_articles(id, limit)

@@ -4,7 +4,6 @@
 			<tr>
 				<th class="text-center" style="width:10%;">ID</th>
 				<th>Name</th>
-				<th>Slug</th>
 				<th>Badge</th>
 				<th class="text-center">Articles</th>
 				<th>Action</th>
@@ -15,7 +14,6 @@
 				<tr>
 					<td class="text-center"><%= category.id %></td>
 					<td><h5 class="fs-14 mb-0"><%= link_to category.name, admins_category_path(category.id), class: "text-body" %></h5></td>
-					<td><%= category.slug %></td>
 					<td><%= badge_category(category) %></td>
 					<td class="text-center"><%= category.articles.size %></td>
 					<td>

@@ -21,7 +21,7 @@ puts "Create Snippet: #{about_sumatra_kruh.name}"
 sumatra_kruh_map = Snippet.new(name: "sumatra_kruh_map")
 sumatra_kruh_map.template = "image_display"
 sumatra_kruh_map.image.attach(io: Rails.root.join("vendor/assets/images/diagrams/sumatra-kruh-map.png").open, filename: "sumatra-kruh-map.png")
-mission.save
+sumatra_kruh_map.save
 Section.create(page_id: @sumatra_kruh_page.id, snippet_id: sumatra_kruh_map.id, css_class: "small-section", order_no: 2)
 puts "Create Snippet: #{sumatra_kruh_map.name}"
 
@@ -34,7 +34,7 @@ sumatra_kruh_video.video_url = ""
 Mobility.with_locale(:cn) {
 	sumatra_kruh_video.short_description = "我们持有 Kruh Block 100% 的参与权益。该区块根据与印度尼西亚国有石油和天然气公司 Pertamina 签订的技术援助合同 (TAC) 运营，直至 2020 年 5 月，Kruh 区块的运营将从 2020 年 5 月至 2030 年 5 月继续作为联合运营合作伙伴关系 (KSO)。"
 }
-mission.save
+sumatra_kruh_video.save
 Section.create(page_id: @sumatra_kruh_page.id, snippet_id: sumatra_kruh_video.id, css_class: "small-section", order_no: 3)
 puts "Create Snippet: #{sumatra_kruh_video.name}"
 

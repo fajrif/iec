@@ -1,9 +1,6 @@
 <%- text_color, btn_color = get_iec_element_colors(bg_color) -%>
 
 <%- text_width = snippet.css_title unless snippet.css_title.blank? -%>
-<%- if snippet.title_rotate? -%>
-	<%- text_width = 'w-200px sm-w-100' -%>
-<%- end -%>
 
 <%- desc_width = 'w-70 sm-w-100' -%>
 <%- desc_width = snippet.css_desc unless snippet.css_desc.blank? -%>
@@ -29,25 +26,12 @@
 				</div>
 			</div>
 		<% else %>
-			<% if snippet.title_rotate? %>
-				<div class="col-12 col-md-1 d-md-flex">
-					<div class="text-rotate">
-						<h3 class="font-weight-320 text-uppercase text-flip <%= text_width %>"><%= snippet.title %></h3>
-					</div>
+			<div class="col-12 wow animate__fadeIn">
+				<h3 class="font-weight-320 text-uppercase w-90"><%= snippet.title %></h3>
+				<div class="<%= desc_width %> margin-30px-bottom sm-margin-15px-bottom">
+					<%= raw snippet.short_description %>
 				</div>
-				<div class="col-12 col-md-11 wow animate__fadeIn">
-					<div class="<%= desc_width %> margin-30px-bottom sm-margin-15px-bottom">
-						<%= raw snippet.short_description %>
-					</div>
-				</div>
-			<% else %>
-				<div class="col-12 wow animate__fadeIn">
-					<h3 class="font-weight-320 text-uppercase w-90"><%= snippet.title %></h3>
-					<div class="<%= desc_width %> margin-30px-bottom sm-margin-15px-bottom">
-						<%= raw snippet.short_description %>
-					</div>
-				</div>
-			<% end %>
+			</div>
 		<% end %>
 	</div>
 </div>

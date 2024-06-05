@@ -4,7 +4,6 @@
 			<tr>
 				<th class="text-center" style="width:10%;">ID</th>
 				<th>Name</th>
-				<th>Slug</th>
 				<th>Badge</th>
 				<th class="text-center">Reports</th>
 				<th>Action</th>
@@ -15,7 +14,6 @@
 				<tr>
 					<td class="text-center"><%= report_type.id %></td>
 					<td><h5 class="fs-14 mb-0"><%= link_to report_type.name, admins_report_type_path(report_type.id), class: "text-body" %></h5></td>
-					<td><%= report_type.slug %></td>
 					<td><%= badge_category(report_type) %></td>
 					<td class="text-center"><%= report_type.reports.size %></td>
 					<td>

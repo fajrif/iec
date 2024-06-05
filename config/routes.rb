@@ -9,11 +9,6 @@ Rails.application.routes.draw do
 
   devise_for :admins, :controllers => { :sessions => "admins/sessions" }
 
-	# Custom App Route
-	# based on article categories
-	# 	report_types, archive_types and member_types
-	# Amman::CustomRoutes.new(self)
-
 	scope "(:locale)", locale: /cn/ do
 		namespace :admins do
 			root :to => 'dashboard#index'

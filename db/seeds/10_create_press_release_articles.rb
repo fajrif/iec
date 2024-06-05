@@ -7,7 +7,7 @@
 	#<p>To receive The Copper Mark participating copper producer sites, including AMMAN’s, are assessed against 32 responsible production criteria. The criteria are defined by the Risk Readiness Assessment created and owned by the Responsible Minerals Initiative. The Risk Readiness Assessment covers the core expectations for responsible production across all major environmental, social and governance issue areas. Once the participating site can demonstrate, through an independent third-party assessment, that they fully or partially meet all 32 criteria, the Copper Mark is awarded. For any areas that are partially met, the site must implement an improvement plan within 12 months of the assessment.</p>
 	#<p>Founded and developed by the International Copper Association, since December 2019, The Copper Mark has been incorporated as an independent and multi-stakeholder organization.  The organization is governed by its Board of Directors and Multi-stakeholder Advisory Council including civil society and human rights experts.</p>
 	#}
-#Mobility.with_locale(:id) {
+#Mobility.with_locale(:cn) {
 #press_release2.title = "AMMAN Mengumumkan Komitmennya terhadap Merek Tembaga untuk Produksi Tembaga yang Bertanggung Jawab"
 #press_release2.content = %q{
 	#<p>JAKARTA, 26 September 2023 - PT Amman Mineral Nusa Tenggara (AMMAN) menandatangani Letter of Commitment (LoC) dengan The Copper Mark, kerangka jaminan pertama dan satu-satunya untuk tembaga, yang dibuat untuk menunjukkan praktik produksi yang bertanggung jawab dan kontribusi industri terhadap PBB Tujuan Pembangunan Berkelanjutan, atau SDGs.</p>

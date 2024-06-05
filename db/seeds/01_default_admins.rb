@@ -8,9 +8,9 @@ adm3 = Role.create(:name => "investor", :description => "Admin to manage investo
 
 Admin.delete_all
 puts "create administrator"
-Admin.create(:full_name => "Administrator", :email => "admin@iec.co.id", :password => "secret1234!", :password_confirmation => "secret1234!", role: adm1)
-Admin.create(:full_name => "Admin Website", :email => "developer@iec.co.id", :password => "secret1234!", :password_confirmation => "secret1234!", role: adm2)
-Admin.create(:full_name => "Admin Investor", :email => "investor@iec.co.id", :password => "secret1234!", :password_confirmation => "secret1234!", role: adm3)
+Admin.create(:full_name => "Administrator", :email => "admin@indo-energy.com", :password => "secret1234!", :password_confirmation => "secret1234!", role: adm1)
+Admin.create(:full_name => "Admin Website", :email => "developer@indo-energy.com", :password => "secret1234!", :password_confirmation => "secret1234!", role: adm2)
+Admin.create(:full_name => "Admin Investor", :email => "investor@indo-energy.com", :password => "secret1234!", :password_confirmation => "secret1234!", role: adm3)
 
 Setting.delete_all
 puts "create setting"

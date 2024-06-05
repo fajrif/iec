@@ -131,7 +131,7 @@ puts "Create Snippet: #{presentation.name}"
 @contact_us.title = "IEC – Indonesia Energy Corporation"
 @contact_us.short_description = "Developing ENERGY RECOURCES in the western part of Indonesia"
 @contact_us.template = "call_to_action1"
-Mobility.with_locale(:id) {
+Mobility.with_locale(:cn) {
 	@contact_us.title = "IEC——印度尼西亚能源公司"
 	@contact_us.short_description = "开发印度尼西亚西部地区的能源资源"
 }

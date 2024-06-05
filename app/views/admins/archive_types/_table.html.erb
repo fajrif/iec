@@ -5,7 +5,6 @@
 				<th class="text-center" style="width:10%;">ID</th>
 				<th>Name</th>
 				<th>Badge</th>
-				<th>Slug</th>
 				<th class="text-center">Archives</th>
 				<th>Action</th>
 			</tr>
@@ -16,7 +15,6 @@
 					<td class="text-center"><%= archive_type.id %></td>
 					<td><h5 class="fs-14 mb-0"><%= link_to archive_type.name, admins_archive_type_path(archive_type.id), class: "text-body" %></h5></td>
 					<td><%= badge_category(archive_type) %></td>
-					<td><%= archive_type.slug %></td>
 					<td class="text-center"><%= archive_type.archives.size %></td>
 					<td>
 						<div class="dropdown">

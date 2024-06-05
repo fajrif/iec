@@ -3,9 +3,9 @@ class Page < ApplicationRecord
   translates :meta_title, :meta_description
 
 	extend FriendlyId
-	include PublishedExtension
+  friendly_id :title, use: :slugged
 
-  friendly_id :title
+	include PublishedExtension
 
 	default_scope { order(id: :asc) }
 
