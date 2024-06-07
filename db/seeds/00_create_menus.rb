@@ -16,7 +16,7 @@ header.save
 puts "create menu footer"
 footer_menu_en = File.read(Rails.root.join("public/menu/footer_menu_en.json"))
 footer_menu_cn = File.read(Rails.root.join("public/menu/footer_menu_cn.json"))
-footer = Menu.create(:section => 2, :data => footer_menu_cn)
+footer = Menu.create(:section => 2, :data => footer_menu_en)
 Mobility.with_locale(:cn) {
 	footer.data = footer_menu_cn
 }

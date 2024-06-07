@@ -50,6 +50,8 @@ id:
     recaptcha_failed: "Recaptcha verifikasi gagal"
     view_profile: "Lihat Profil"
     view_all: "Lihat Semua"
+    view_locations: "Lihat Semua Lokasi"
+    view_media: "Lihat Semua Media"
     view: "Lihat"
     back_to: "Kembali ke %{object_name}"
     back_to_news: "Kembali ke Berita"

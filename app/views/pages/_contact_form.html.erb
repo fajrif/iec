@@ -4,25 +4,8 @@
 
 <div class="container tab-style3">
 	<div class="row">
-		<div class="col-12">
-			<div class="tab-box margin-70px-bottom sm-margin-10px-bottom">
-				<!-- start tab navigation -->
-				<ul class="nav nav-tabs margin-30px-bottom sm-margin-10px-bottom text-uppercase alt-font text-medium font-weight-500 justify-content-start">
-					<li class="nav-item"><a class="text-medium-gray nav-link active" href="#tab-five1" data-bs-toggle="tab"><%= t('contacts.investor') %></a></li>
-				</ul>
-				<!-- end tab navigation -->
-			</div>
-			<div class="tab-content">
-					<!-- start tab content -->
-					<div class="tab-pane med-text fade in active show" id="tab-five1">
-						<div class="row">
-							<div id="investorInquiryForm" class="col-12">
-								<%= render "investor_inquiries/form" %>
-							</div>
-						</div>
-					</div>
-					<!-- end tab content -->
-			</div>
+		<div id="investorInquiryForm" class="col-12">
+			<%= render "investor_inquiries/form" %>
 		</div>
 	</div>
 </div>

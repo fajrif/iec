@@ -35,8 +35,8 @@
 
 .alert-danger {
 	--bs-alert-color: #fff;
-	--bs-alert-bg: var(--red-color);
-	--bs-alert-border-color: var(--very-light-red-color);
+	--bs-alert-bg: var(--bs-form-invalid-color);
+	--bs-alert-border-color: var(--bs-form-invalid-color);
 	--bs-alert-link-color: #fff;
 	margin-bottom: 2rem;
 }

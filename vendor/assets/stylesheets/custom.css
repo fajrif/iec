@@ -90,9 +90,9 @@ header.header-appear nav.header-dark .logo img.default {
 .disclosure_information .archive-title > a:hover {
 	color: var(--black-color) !important;
 }
-.blog-content .post-details a:hover {
-	color: var(--black-color) !important;
-}
+/*.blog-content .post-details a:hover {*/
+	/*color: var(--black-color) !important;*/
+/*}*/
 footer a:hover,
 .blog-content.archives .post-details a:hover,
 .blog-content.reports .post-details a:hover {
@@ -319,6 +319,10 @@ header nav .navbar-nav.text-normal > li > a {
 	opacity: 1;
 	height: auto;
 }
+.banner-short-desc {
+	font-size: 24px;
+	font-weight: 300;
+}
 
 .full-width-pull-menu.opened-menu .center-logo,
 .full-width-pull-menu.opened-menu .navbar-collapse > ul.navbar-nav {
@@ -360,6 +364,17 @@ header nav .navbar-nav.text-normal > li > a {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+#sumatra_kruh_video .info_short_desc,
+#java_citarum_video .info_short_desc {
+	font-weight: 300;
+	font-size: 26px;
+	line-height: 30px;
+}
+
+.form-label {
+	font-weight: 600;
 }
 
 @media (max-width: 767px) {

@@ -33,22 +33,9 @@
 			<div class="col no-padding-lr wow animate__fadeIn" data-wow-delay="0.2s">
 				<div class="cover-background <%= text_color %> padding-50px-all sm-padding-five-lr" style="background: transparent url('<%= url_for(snippet.image) if snippet.image.attached? %>')">
 					<div class="container-xl sm-no-padding-lr d-flex flex-column justify-content-between">
-						<% if snippet.caption_rotate? %>
-						<div class="row <%= desc_height %>">
-							<div class="col-12 col-md-1 d-md-flex">
-								<div class="text-rotate">
-									<span class="font-weight-320 text-uppercase text-flip"><%= snippet.caption %></span>
-								</div>
-							</div>
-							<div class="col-12 col-md-11">
-								<%= content_tag(header_tag.to_sym, snippet.title, class: "font-weight-320 text-uppercase margin-10px-bottom d-inline-block #{title_width}") %>
-							</div>
+						<div class="<%= desc_height %>">
+							<%= content_tag(header_tag.to_sym, snippet.title, class: "margin-10px-bottom d-inline-block #{title_width}") %>
 						</div>
-						<% else %>
-							<div class="<%= desc_height %>">
-								<%= content_tag(header_tag.to_sym, snippet.title, class: "font-weight-320 text-uppercase margin-10px-bottom d-inline-block #{title_width}") %>
-							</div>
-						<% end %>
 						<div class="d-flex flex-column flex-md-row gap-50 justify-content-end align-items-start">
 							<% unless short_description.blank? %>
 								<div class="<%= desc_width %>">
@@ -80,7 +67,7 @@
 				<div class="cover-background <%= text_color %> padding-50px-all sm-padding-five-lr" style="background: transparent url('<%= url_for(snippet.image) if snippet.image.attached? %>')">
 					<div class="container-xl sm-no-padding-lr d-flex flex-column justify-content-between">
 						<div class="<%= desc_height %>">
-							<%= content_tag(header_tag.to_sym, snippet.title, class: "font-weight-320 text-uppercase margin-10px-bottom d-inline-block #{title_width}") %>
+							<%= content_tag(header_tag.to_sym, snippet.title, class: "margin-10px-bottom d-inline-block #{title_width}") %>
 						</div>
 						<div class="d-flex flex-column flex-md-row gap-50 justify-content-end align-items-start">
 							<div class="<%= desc_width %>">
@@ -106,21 +93,54 @@
 		</div>
 	</div>
 	<!-- end features item -->
+<% elsif snippet.orientation == 'center' %>
+	<div class="container-fluid">
+		<div class="row row-cols-1">
+			<!-- start features item -->
+			<div class="col no-padding-lr wow animate__fadeIn" data-wow-delay="0.2s">
+				<div class="cover-background <%= text_color %> padding-ten-tb padding-five-lr" style="background: transparent url('<%= url_for(snippet.image) if snippet.image.attached? %>')">
+					<div class="container-xl sm-no-padding-lr d-flex flex-column justify-content-between">
+						<div class="text-center <%= desc_height %>">
+							<%= content_tag(header_tag.to_sym, snippet.title, class: "margin-10px-bottom d-inline-block #{title_width}") %>
+						</div>
+						<div class="d-flex flex-column flex-md-row gap-50 justify-content-end align-items-start">
+							<% unless short_description.blank? %>
+								<div class="<%= desc_width %>">
+									<div class="<%= margin_bottom %> last-paragraph-no-margin md-margin-30px-right">
+										<%= raw short_description %>
+									</div>
+								</div>
+							<% end %>
+							<div class="<%= desc_width %>">
+								<div class="<%= margin_bottom %> last-paragraph-no-margin">
+									<%= raw description %>
+								</div>
+								<% snippet.link_buttons.each do |link_button| %>
+									<%= render_link_text_url(link_button, "btn btn-medium #{btn_color} btn-rounded btn-border margin-10px-bottom d-block w-fit-content") %>
+								<% end %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end features item -->
+		</div>
+	</div>
 <% else %>
 	<div class="container-xl">
 		<div class="row row-cols-1">
 			<!-- start features item -->
 			<div class="col margin-20px-bottom wow animate__fadeIn" data-wow-delay="0.2s">
-				<div class="cover-background <%= text_color %> padding-50px-all sm-padding-five-lr barder-radius-8" style="background: transparent url('<%= url_for(snippet.image) if snippet.image.attached? %>')">
-					<h1 class="font-weight-320 text-uppercase margin-10px-bottom d-inline-block <%= title_width %>"><%= snippet.title %></h1>
-					<div class="d-flex gap-50 flex-row-reverse align-items-end h-250px <%= snippet.css_class %>">
+				<div class="cover-background <%= text_color %> padding-50px-all sm-padding-five-lr border-radius-20" style="background: transparent url('<%= url_for(snippet.image) if snippet.image.attached? %>')">
+					<h1 class="margin-10px-bottom d-inline-block"><%= snippet.title %></h1>
+					<%- if link_button = snippet.link_buttons.first -%>
+						<%= render_link_text_url(link_button, "btn btn-transparent-iec btn-rounded btn-border margin-30px-bottom ms-2 border-radius-50 border-width-2", true) %>
+					<%- end -%>
+					<div class="d-flex gap-50 flex-row align-items-end h-250px <%= snippet.css_class %>">
 						<div class="<%= desc_width %>">
 							<div class="margin-30px-bottom">
 								<%= raw snippet.short_description %>
 							</div>
-							<% snippet.link_buttons.each do |link_button| %>
-								<%= render_link_text_url(link_button, "btn btn-medium #{btn_color} btn-rounded btn-border margin-10px-bottom d-block w-fit-content") %>
-							<% end %>
 						</div>
 					</div>
 				</div>

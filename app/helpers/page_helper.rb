@@ -1,7 +1,7 @@
 module PageHelper
 
 	# Rendering Link to Url Helper
-	def render_link_text_url(object, class_name="btn btn-medium btn-iec btn-rounded")
+	def render_link_text_url(object, class_name="btn btn-medium btn-iec btn-rounded", only_arrow=false)
 		# check if object file downloadable
 		if object.is_route_to_file?
 			return render_link_file_url(object, class_name)
@@ -10,10 +10,14 @@ module PageHelper
 			_text = object.link_text
 			_text = get_text_from_object(_text, object)
 			_text = t("global.read_more") if _text.blank?
-			if object.link_text != "download_now"
-				_content_with_icon = raw("#{_text} #{content_tag(:i, nil, class: 'iec-icon-right icon-very-small')}")
+			if only_arrow
+				_content_with_icon = raw("#{content_tag(:i, nil, class: 'fa-solid fa-arrow-right icon-very-small ms-0')}")
 			else
-				_content_with_icon = _text
+				if object.link_text != "download_now"
+					_content_with_icon = raw("#{_text} #{content_tag(:i, nil, class: 'fa-solid fa-arrow-right icon-very-small')}")
+				else
+					_content_with_icon = _text
+				end
 			end
 			link_to(get_link_from_link_button_object(object), class: class_name, target: _target) do
 				_content_with_icon
@@ -44,8 +48,8 @@ module PageHelper
 	end
 
 	def get_iec_element_colors(bg_color)
-	 if bg_color == 'bg-dark-grey' or bg_color == 'bg-black'
-			return 'text-white-2', 'btn-transparent-iec'
+	 if bg_color == 'bg-green' or bg_color == 'bg-black' or bg_color == "bg-dark-grey" or bg_color == "bg-green-gradient"
+			return 'text-white-2', 'btn-iec'
 		elsif bg_color == 'bg-yellow' or bg_color == 'bg-grey'
 			return 'text-extra-dark-gray', 'btn-iec btn-border'
 		else
@@ -143,8 +147,12 @@ module PageHelper
 	end
 
 	def generate_footer_link(data)
-		menu = data.first
-		_menu = link_to(menu["label"], menu["url"] ? menu["url"] : "#")
+		_menu = ""
+		data.each do |menu|
+			_menu += content_tag(:li, class: "d-inline-block margin-10px-right") do
+				link_to(menu["label"], menu["url"] ? menu["url"] : "#", class: "text-white-2")
+			end
+		end
 		return _menu
 	end
 

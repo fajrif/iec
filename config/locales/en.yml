@@ -50,6 +50,8 @@ en:
     recaptcha_failed: "Recaptcha verification failed"
     view_profile: "View Profile"
     view_all: "View All"
+    view_locations: "See All Locations"
+    view_media: "See All Media"
     view: "View"
     back_to: "Back to %{object_name}"
     back_to_news: "Back to News"

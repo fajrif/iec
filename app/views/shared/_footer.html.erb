@@ -1,45 +1,49 @@
 <%- load_footer_menu -%>
 <!-- start footer -->
-<footer class="footer-center-logo-dark cover-background text-white-2 padding-twenty-top padding-two-bottom sm-no-padding-bottom" style="background-image:url('<%= image_url("banners/bg-footer.png") %>');">
-	<div class="footer-widget-area padding-two-top padding-fifteen-bottom sm-padding-100px-top">
+<footer class="footer-modern-dark bg-black text-white-2 padding-three-tb sm-padding-30px-tb">
+	<div class="footer-widget-area padding-40px-bottom sm-padding-30px-bottom">
 		<div class="container-xl">
-			<div class="row row-cols-2 row-cols-lg-4 row-cols-sm-2">
-				<div class="col widget md-margin-30px-bottom sm-margin-10px-bottom text-start">
-					<!-- start logo -->
+			<div class="row align-items-center">
+				<!-- start links -->
+				<div class="col-lg-6 col-md-6 social-style-2 text-center text-md-start">
+					<div class="footer-links">
+						<ul class="text-small margin-20px-top sm-no-margin-bottom text-uppercase p-0 mb-0 list-unstyled">
+							<%= raw generate_footer_link(@footer_menu) %>
+						</ul>
+					</div>
 					<%= link_to root_url, class: "margin-20px-bottom d-inline-block" do %>
-						<%= image_tag("logo2.png", class: "footer-logo", alt: "Indo Energy Corporation") %>
+						<%= image_tag("logo.png", class: "footer-logo", alt: "Indo Energy Corporation") %>
 					<% end %>
-					<!-- end logo -->
 				</div>
+				<!-- end links -->
+				<%- if address = Address.all -%>
+					<% address.reverse.each_with_index do |adr, index| %>
+						<div class="col-lg-3 col-md-6 <%= 'padding-five-lr' if index == 0 %> text-center text-md-start sm-margin-20px-bottom">
+							<h6 class="margin-10px-bottom"><%= adr.name %></h6>
+							<span class="d-block text-medium"><%= raw adr.complete_address %></span>
+						</div>
+					<% end %>
+				<% end %>
 			</div>
 		</div>
 	</div>
 	<div class="container-xl">
-		<div class="row align-items-center">
-			<!-- start copyright -->
-			<div class="col-5 col-lg-4 col-md-4 col-sm-5 order-2 text-medium text-uppercase text-md-start">
-				<%= raw generate_footer_link(@footer_menu) %>
-			</div>
-			<!-- end copyright -->
-			<!-- start logo -->
-			<div class="col-12 col-lg-4 col-md-4 col-sm-12 order-1 order-md-2 text-start text-md-center text-lg-end sm-margin-50px-bottom">
-				<%= raw generate_footer_contact_us(@footer_menu) %>
-			</div>
-			<!-- end logo -->
-			<!-- start social media -->
-			<div class="col-7 col-lg-4 col-md-4 col-sm-7 order-3 text-end text-md-end">
-				<div class="social-icon-style-8 d-inline-block align-middle">
-					<ul class="large-icon mb-0">
-						<li><a class="facebook" href="<%= configatron.social_facebook_url %>" target="_blank"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
-						<li><a class="twitter" href="<%= configatron.social_twitter_url %>" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-						<li><a class="instagram" href="<%= configatron.social_instagram_url %>" target="_blank"><i class="fa-brands fa-instagram me-0" aria-hidden="true"></i></a></li>
-						<li><a class="youtube" href="<%= configatron.social_youtube_url %>" target="_blank"><i class="fa-brands fa-youtube me-0" aria-hidden="true"></i></a></li>
-						<li><a class="linkedin" href="<%= configatron.social_linkedin_url %>" target="_blank"><i class="fa-brands fa-linkedin-in me-0" aria-hidden="true"></i></a></li>
-					</ul>
+		<!-- start copyright -->
+		<div class="footer-bottom border-top border-color-medium-dark-gray padding-40px-top sm-padding-30px-top">
+			<div class="row row-cols-1 row-cols-md-2 align-items-center">
+				<div class="col text-md-start text-center text-medium">
+					<div class="social-icon-style-8 d-inline-block align-middle">
+						<ul class="medium-icon mb-0">
+							<li><a class="linkedin text-white-2" href="<%= configatron.social_linkedin_url %>" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+							<li><a class="instagram text-white-2" href="<%= configatron.social_instagram_url %>" target="_blank"><i class="fa-brands fa-instagram no-margin-right"></i></a></li>
+						</ul>
+					</div>
 				</div>
+				<div class="col text-md-end text-center text-medium">&copy; 2024 Indonesia Energy Corporation</div>
 			</div>
-			<!-- end social media -->
 		</div>
+		<!-- end copyright -->
 	</div>
 </footer>
 <!-- end footer -->
+

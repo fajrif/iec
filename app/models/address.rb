@@ -6,7 +6,5 @@ class Address < ApplicationRecord
 
 	validates_presence_of :name, :complete_address
 	validates_uniqueness_of :name
-	validates :email1, email: true
-	validates :email2, email: true
 
 end

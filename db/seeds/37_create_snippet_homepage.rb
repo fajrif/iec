@@ -28,6 +28,9 @@ about_company = Snippet.new(name: "about_company")
 about_company.title = "Our producing asset, Kruh Block, located in Pendopo, South Sumatra province, is a stable and positive cashflow generating oil asset"
 about_company.template = "call_to_action2"
 about_company.orientation = "center"
+about_company.title_tag = "h2"
+about_company.css_title = "w-100 sm-w-100"
+about_company.css_class = "h-200px sm-h-200px"
 about_company.image.attach(io: Rails.root.join("vendor/assets/images/banners/banner-about2.png").open, filename: "banner-about2.png")
 Mobility.with_locale(:cn) {
 	about_company.title = "我们的生产资产 Kruh 区块位于南苏门答腊省彭多波，是一项稳定且能产生正现金流的石油资产"
@@ -54,6 +57,11 @@ Mobility.with_locale(:cn) {
 	}
 }
 our_story.save
+link_button = our_story.link_buttons.build
+link_button.route_category = 2
+link_button.objectable = @about_page
+link_button.link_text = "view_title"
+link_button.save
 Section.create(page_id: @home_page.id, snippet_id: our_story.id, bg_color: "bg-green", css_class: "half-section", order_no: 4)
 puts "Create Snippet: #{our_story.name}"
 
@@ -72,7 +80,7 @@ link_button = sustainability.link_buttons.build
 link_button.route_category = 2
 link_button.objectable = @sustainability_page
 link_button.save
-Section.create(page_id: @home_page.id, snippet_id: sustainability.id, bg_color: "bg-black", css_class: "p-0", order_no: 5)
+Section.create(page_id: @home_page.id, snippet_id: sustainability.id, css_class: "half-section", order_no: 5)
 puts "Create Snippet: #{sustainability.name}"
 
 # create locations
@@ -89,7 +97,7 @@ link_button.route_category = 2
 link_button.objectable = @portfolio_page
 link_button.link_text = "view_locations"
 link_button.save
-Section.create(page_id: @home_page.id, snippet_id: locations.id, css_class: "small-section", order_no: 6)
+Section.create(page_id: @home_page.id, snippet_id: locations.id, css_class: "small-section pt-0", order_no: 6)
 puts "Create Snippet: #{locations.name}"
 
 # create media
@@ -114,6 +122,7 @@ presentation = Snippet.new(name: "presentation")
 presentation.title = "INDONESIA ENERGY CORP (NYSE AMERICAN: INDO)"
 presentation.template = "info_image"
 presentation.orientation = "left"
+presentation.title_tag = "h4"
 presentation.image.attach(io: Rails.root.join("vendor/assets/images/pictures/iec_presentation.png").open, filename: "iec_presentation.png")
 Mobility.with_locale(:cn) {
 	presentation.title = "印度尼西亚能源公司（纽约证券交易所股票代码：INDO）"
@@ -122,8 +131,9 @@ presentation.save
 link_button = presentation.link_buttons.build
 link_button.route_category = 2
 link_button.objectable = @compro_file
+link_button.link_text = "view_title"
 link_button.save
-Section.create(page_id: @home_page.id, snippet_id: presentation.id, css_class: "half-section", order_no: 8)
+Section.create(page_id: @home_page.id, snippet_id: presentation.id, css_class: "half-section pb-0", order_no: 8)
 puts "Create Snippet: #{presentation.name}"
 
 # create contact_us
@@ -141,5 +151,5 @@ link_button.route_category = 2
 link_button.objectable = @contact_page
 link_button.link_text = "contact_us"
 link_button.save
-Section.create(page_id: @home_page.id, snippet_id: @contact_us.id, bg_color: "bg-green-gradient", css_class: "half-section", order_no: 9)
+Section.create(page_id: @home_page.id, snippet_id: @contact_us.id, css_class: "half-section", order_no: 9)
 puts "Create Snippet: #{@contact_us.name}"

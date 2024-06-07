@@ -34,7 +34,7 @@ class InvestorInquiriesController < ApplicationController
   private
 
   def params_investor_inquiry
-    params.require(:investor_inquiry).permit(:name, :email, :phone, :message, :subject, :use_v2)
+    params.require(:investor_inquiry).permit(:name, :email, :phone, :message, :subject, :company_name, :use_v2)
   end
 
 	def create_data

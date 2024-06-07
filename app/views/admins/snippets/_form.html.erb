@@ -35,10 +35,7 @@
 						<div class="card-body">
 							<%= f.input :template, as: :select, collection: available_snippets_template %>
 							<%= f.input :title_tag, as: :select, collection: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] %>
-							<%= f.input :title_rotate, as: :select, collection: [['0', 'false'], ['1', 'true']], label_method: :second, value_method: :first %>
-							<%= f.input :use_caption_rotate, as: :select, label: "Caption Rotate", collection: [['0', 'false'], ['1', 'true']], label_method: :second, value_method: :first %>
 							<%= f.input :orientation, as: :select, collection: available_snippets_orientations, include_blank: true %>
-							<%= f.input :offset %>
 							<%= f.input :parent_id, as: :select, collection: Snippet.where(template: nested_snippets_template), value_mthod: :id, label_method: :name, include_blank: true %>
 							<%= f.input :bg_color, as: :select, collection: available_bg_colors, include_blank: true %>
 							<%= f.input :text_color, as: :select, collection: available_text_colors, include_blank: true %>

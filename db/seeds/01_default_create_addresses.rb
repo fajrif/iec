@@ -11,7 +11,7 @@ addresses = [{
 }, {
 	en: "US Office",
 	cn: "美国办事处",
-	address: "4115 Blackhawk Plaza<br/>CircleSuite 100Danville, CA 94506 USA"
+	address: "4115 Blackhawk Plaza<br/>CircleSuite 100Danville,<br/> CA 94506 USA"
 }]
 
 addresses.each_with_index do |adr, i|

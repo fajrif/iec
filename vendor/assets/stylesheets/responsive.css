@@ -1266,12 +1266,12 @@
 }
 @media (min-width: 1400px) {
 	.navbar .nav-header-container.container-xl {
-		max-width: 1400px;
+		/*max-width: 1400px;*/
 	}
 }
 @media (min-width: 1200px) {
 	.navbar .nav-header-container.container-xl {
-		max-width: unset;
+		/*max-width: unset;*/
 	}
 }
 @media (max-width: 1300px) {

@@ -9,8 +9,8 @@ configatron.site_name = "indo-energy.com"
 configatron.site_title = "Indonesia Energy Corporation – Integrated Energy Resources Development Company"
 configatron.site_description = "We are an independent energy company engaged in the oil and gas business with operations primarily in Indonesia."
 # Social Media
-configatron.social_linkedin_url = "https://linkedin.com/"
-configatron.social_instagram_url = "http://www.instagram.com/"
+configatron.social_linkedin_url = "https://id.linkedin.com/company/wj-energy"
+configatron.social_instagram_url = "https://www.instagram.com/indonesiaenergycorp/"
 
 # iec's Video From Youtube
 configatron.video_company_profile_youtube_url = "https://www.youtube.com/watch?v=dGd7iV7hSEI"

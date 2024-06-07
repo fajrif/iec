@@ -34,7 +34,7 @@ module AdminHelper
 			message += content_tag :div, :class => "alert alert-#{name.to_sym == :notice ? 'success' : 'danger'} alert-dismissible alert-label-icon label-arrow fade show" do
 				lbl = raw(msg)
 				lbl += content_tag(:button, nil, class: "btn-close", "data-bs-dismiss": "alert", "aria-label": "Close") do
-					content_tag(:i, nil, class: "iec-icon-close text-white-2")
+					content_tag(:i, nil, class: "fa-solid fa-close text-white-2")
 				end
 			end unless msg == true
     end
@@ -102,6 +102,7 @@ module AdminHelper
 			"video_display",
 			"video_popup",
 			"info_image",
+			"info_image2",
 			"info_image_left",
 			"info_description"
 		]

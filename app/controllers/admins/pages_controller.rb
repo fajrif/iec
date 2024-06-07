@@ -2,11 +2,7 @@ class Admins::PagesController < Admins::BaseController
 	before_action :set_page, except: [:index, :new, :create]
 
   def index
-		if params[:search].blank?
-			criteria = Page.all
-		else
-			criteria = Page.where("title ->> :key ILIKE :value", key: I18n.locale.to_s, value: "%#{params[:search]}%")
-		end
+		criteria = Page.where("title ILIKE ?", "%#{params[:search]}%")
     @pages = criteria.page(params[:page]).per(10)
 
     respond_to do |format|
