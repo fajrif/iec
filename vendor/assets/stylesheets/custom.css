@@ -369,8 +369,15 @@ header nav .navbar-nav.text-normal > li > a {
 #sumatra_kruh_video .info_short_desc,
 #java_citarum_video .info_short_desc {
 	font-weight: 300;
-	font-size: 26px;
-	line-height: 30px;
+	font-size: 24px;
+	line-height: 28px;
+}
+
+#about_sumatra_kruh .info_short_desc,
+#about_java_citarum .info_short_desc {
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 42px;
 }
 
 .form-label {

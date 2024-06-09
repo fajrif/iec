@@ -12987,10 +12987,19 @@ figure {
 /* feature box style 1 */
 .feature-box-1 {
   display: table;
+	border: 1px solid #fff;
+	border-radius: 20px;
+	padding: 50px 0 20px 0 !important;
+	cursor: pointer;
 }
 .feature-box-1 .char-value {
   display: table-cell;
   vertical-align: middle;
+	margin-left: 20px;
+	margin-bottom: 50px !important;
+}
+.feature-box-1:hover {
+  background-image: linear-gradient(to bottom right, var(--medium-green-color) , var(--green-color));
 }
 
 /* feature box style 4 */
@@ -15315,10 +15324,10 @@ footer .instafeed-grid.gutter-extra-large {
   padding: 3px 15px;
 }
 .icon-play img {
-  width: 60%;
+  width: 30%;
 }
 .icon-play:hover img {
-  width: 68%;
+  width: 35%;
 }
 
 /* play icon */

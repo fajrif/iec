@@ -1,14 +1,13 @@
 # create about_java_citarum
 about_java_citarum = Snippet.new(name: "about_java_citarum")
-about_java_citarum.title = "Citarum is a gas prone block covering an area of 3,925 square kilo meters (969,807 acres) located just 16 miles south from Jakarta, Indonesia’s capital city."
+about_java_citarum.short_description = "Citarum is a gas prone block covering an area of 3,925 square kilo meters (969,807 acres) located just 16 miles south from Jakarta, Indonesia’s capital city."
 about_java_citarum.description = %q{
 <p>The region has been known to have a proven petroleum system due to its long history of exploration and production efforts since the 1960’s, where, currently, the combined oil fields produce a total of 45,000 BOPD and 450 MMSCFD.</p>
 <p>In the past 10 years, 4 wells were drilled in different locations across the block and, providentially, all 4 wells discovered natural gas while gas flow was recorded in 2 of those wells. So far, more than US$ 40 million has already been invested in Citarum Block.</p>
 }
 about_java_citarum.template = "info_description"
-about_java_citarum.title_tag = "h4"
 Mobility.with_locale(:cn) {
-	about_java_citarum.title = "Citarum 是一个易燃气体区块，占地 3,925 平方公里（969,807 英亩），位于印度尼西亚首都雅加达以南仅 16 英里。"
+	about_java_citarum.short_description = "Citarum 是一个易燃气体区块，占地 3,925 平方公里（969,807 英亩），位于印度尼西亚首都雅加达以南仅 16 英里。"
 	about_java_citarum.description = %q{
 		<p>该地区自 1960 年代以来一直致力于勘探和生产，拥有成熟的石油系统，目前，该地区的联合油田产量总计为 45,000 BOPD 和 450 MMSCFD。</p>
 		<p>在过去的 10 年里，该区块的不同地点钻了 4 口井，幸运的是，所有 4 口井都发现了天然气，其中 2 口井还记录到了天然气流量。迄今为止，Citarum Block 已投资超过 4000 万美元。</p>
@@ -56,5 +55,5 @@ puts "Create Snippet: #{info_java_citarum.name}"
 # create java_citarum_key_points
 java_citarum_key_points = Snippet.new(name: "java_citarum_key_points")
 java_citarum_key_points.save
-Section.create(page_id: @java_citarum_page.id, snippet_id: java_citarum_key_points.id, css_class: "p-0", order_no: 5)
+Section.create(page_id: @java_citarum_page.id, snippet_id: java_citarum_key_points.id, bg_color: "bg-green", css_class: "half-section", order_no: 5)
 puts "Create Snippet: #{java_citarum_key_points.name}"

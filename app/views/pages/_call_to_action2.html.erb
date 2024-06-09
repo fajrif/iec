@@ -100,8 +100,8 @@
 			<div class="col no-padding-lr wow animate__fadeIn" data-wow-delay="0.2s">
 				<div class="cover-background <%= text_color %> padding-ten-tb padding-five-lr" style="background: transparent url('<%= url_for(snippet.image) if snippet.image.attached? %>')">
 					<div class="container-xl sm-no-padding-lr d-flex flex-column justify-content-between">
-						<div class="text-center <%= desc_height %>">
-							<%= content_tag(header_tag.to_sym, snippet.title, class: "margin-10px-bottom d-inline-block #{title_width}") %>
+						<div class="text-center">
+							<%= content_tag(header_tag.to_sym, snippet.title, class: "mb-0 d-inline-block #{title_width}") %>
 						</div>
 						<div class="d-flex flex-column flex-md-row gap-50 justify-content-end align-items-start">
 							<% unless short_description.blank? %>

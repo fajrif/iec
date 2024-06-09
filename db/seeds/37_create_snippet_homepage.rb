@@ -28,9 +28,8 @@ about_company = Snippet.new(name: "about_company")
 about_company.title = "Our producing asset, Kruh Block, located in Pendopo, South Sumatra province, is a stable and positive cashflow generating oil asset"
 about_company.template = "call_to_action2"
 about_company.orientation = "center"
-about_company.title_tag = "h2"
+about_company.title_tag = "h3"
 about_company.css_title = "w-100 sm-w-100"
-about_company.css_class = "h-200px sm-h-200px"
 about_company.image.attach(io: Rails.root.join("vendor/assets/images/banners/banner-about2.png").open, filename: "banner-about2.png")
 Mobility.with_locale(:cn) {
 	about_company.title = "我们的生产资产 Kruh 区块位于南苏门答腊省彭多波，是一项稳定且能产生正现金流的石油资产"
@@ -114,7 +113,7 @@ link_button.route_category = 2
 link_button.objectable = @media_page
 link_button.link_text = "view_media"
 link_button.save
-Section.create(page_id: @home_page.id, snippet_id: media.id, css_class: "small-section", order_no: 7)
+Section.create(page_id: @home_page.id, snippet_id: media.id, css_class: "p-0", order_no: 7)
 puts "Create Snippet: #{media.name}"
 
 # create presentation

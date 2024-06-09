@@ -36,6 +36,14 @@ en:
   inquiries:
     success: "Thank You for your inquiry!"
     errors: "Oops sorry we are unable to submit your inquiry!"
+  sumatra_kruh:
+    key_point1: "Positive cash flow producing block."
+    key_point2: "Average total gross production of 330 barrels of oil per day from 4 wells in 2018"
+    key_point3: "Additional 5 prospects within Kruh Block provide significant upside potential in terms of reserves"
+  java_citarum:
+    key_point1: "De-risked exploration block with proven presence of hydrocarbon"
+    key_point2: "Located near the market where there’s a current deficit of natural gas supply"
+    key_point3: "Possibility to tap into the region’s existing pipeline infrastructure network"
   errors:
     404_title: "Page Not Found"
     404_desc: "The page you were looking for could not be found."
@@ -67,4 +75,5 @@ en:
     articles: "Articles"
     pages: "Pages"
     max: "Max"
+    key_points: "Key Points"
     all: "All"

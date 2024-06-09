@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-12 col-lg-12">
-		<h4 class="font-weight-400 text-uppercase"><%= t('contacts.title') %></h4>
+		<h4 class="font-weight-400"><%= t('contacts.title') %></h4>
 	</div>
 	<div class="col-12 col-lg-12">
 		<%= flash_message2 %>
@@ -21,7 +21,7 @@
 						<%= raw Iec::Recaptcha.recaptcha_execute('investor_inquiry') %>
 					<% end %>
 					<div class="col-12 margin-30px-top">
-						<button type="submit" class="btn btn-large btn-iec btn-rounded"><%= t('global.submit') %> <i class="iec-icon-right icon-very-small"></i></button>
+						<button type="submit" class="btn btn-large btn-iec btn-rounded"><%= t('global.submit') %></button>
 					</div>
 				</div>
 			</div>
