@@ -74,7 +74,7 @@ puts "Create Snippet: #{approach.name}"
 # create members
 members = Snippet.new(name: "members")
 members.save
-Section.create(page_id: @about_page.id, snippet_id: members.id, css_class: "small-section", order_no: 5)
+Section.create(page_id: @about_page.id, snippet_id: members.id, bg_color: "bg-grey", css_class: "small-section", order_no: 5)
 puts "Create Snippet: #{members.name}"
 
 # assign contact_us

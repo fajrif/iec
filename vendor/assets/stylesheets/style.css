@@ -11395,6 +11395,8 @@ header.sticky nav.navbar.brand-center ul.nav > li > a {
   /*-o-transition: all 0.3s ease 0s;*/
 }
 .portfolio-wrapper .grid-item figure .portfolio-img {
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
   /*transition: all 0.3s ease 0s;*/
   /*-webkit-transition: all 0.3s ease 0s;*/
   /*-moz-transition: all 0.3s ease 0s;*/
@@ -11702,6 +11704,8 @@ header.sticky nav.navbar.brand-center ul.nav > li > a {
   opacity: 1;
   padding: 35px 10px;
   background: #fff;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
 }
 .hover-option6 .grid-item .portfolio-hover-main {
   transform: none;
@@ -14335,13 +14339,13 @@ figure {
   border: 0;
 }
 .tab-style2 .nav-tabs li {
-  border: 1px solid #e5e5e5;
-  border-bottom: none;
-  border-radius: 0;
+  /*border: 1px solid #e5e5e5;*/
+  /*border-bottom: none;*/
+  /*border-radius: 0;*/
   margin-bottom: 0;
   display: inline-block;
   float: none;
-  margin-right: 5px;
+  /*margin-right: 5px;*/
 }
 .tab-style2 .nav-tabs li a {
   background-color: #f7f7f7;
@@ -14355,6 +14359,10 @@ figure {
 .tab-style2 .nav-tabs-light li:first-child {
   border-left: 1px solid #e5e5e5;
   margin-left: 15px;
+}
+.tab-style2 .nav-tabs li.active a {
+  background-color: var(--green-color);
+	color: #fff;
 }
 .tab-style2 .nav-tabs > li > a.active {
   border-color: transparent;

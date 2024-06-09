@@ -10,4 +10,8 @@ class MemberType < ApplicationRecord
 	has_many :members
 	belongs_to :banner_section, optional: true
 
+	def name_id
+		self.name.downcase.gsub(/ /,'-')
+	end
+
 end
