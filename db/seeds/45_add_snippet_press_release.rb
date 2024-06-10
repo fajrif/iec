@@ -20,8 +20,15 @@ link_button.save
 Section.create(page_id: @press_release_page.id, snippet_id: news_navigation.id, css_class: "small-section", order_no: 1)
 puts "Assign Snippet #{news_navigation.name} to Press Release"
 
+Section.create(page_id: @press_release_page.id, snippet_id: @news.id, css_class: "half-section pt-0", order_no: 2)
+puts "Assign Snippet #{@news.name} to Press Release"
+
+# create videos
+videos = Snippet.new(name: "videos")
+videos.save
+
 Section.create(page_id: @media_page.id, snippet_id: news_navigation.id, css_class: "small-section", order_no: 1)
 puts "Assign Snippet #{news_navigation.name} to Media"
 
-Section.create(page_id: @press_release_page.id, snippet_id: @news.id, css_class: "half-section pt-0", order_no: 2)
-puts "Assign Snippet #{@news.name} to Press Release"
+Section.create(page_id: @media_page.id, snippet_id: videos.id, css_class: "half-section pt-0", order_no: 2)
+puts "Assign Snippet #{videos.name} to Media"
