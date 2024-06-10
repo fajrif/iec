@@ -1,9 +1,8 @@
 # create about_desc
 about_desc = Snippet.new(name: "about_desc")
-about_desc.title = "WE ARE AN INDEPENDENT ENERGY COMPANY ENGAGED IN THE ENERGY BUSINESS WITH OPERATIONS PRIMARILY IN INDONESIA."
+about_desc.short_description = "WE ARE AN INDEPENDENT ENERGY COMPANY ENGAGED IN THE ENERGY BUSINESS WITH OPERATIONS PRIMARILY IN INDONESIA."
 about_desc.description = "Our strategy is to build an oil and gas assets portfolio with an optimum mix between medium-sized producing blocks and exploration blocks with significant potential resources."
 about_desc.template = "info_description"
-about_desc.title_tag = "h5"
 Mobility.with_locale(:cn) {
 	about_desc.short_description = "我们是一家从事能源业务的独立能源公司，主要在印度尼西亚开展业务。"
 	about_desc.description = "我们的战略是建立一个油气资产组合，在中型生产区块和具有大量潜在资源的勘探区块之间实现最佳组合。"
@@ -36,7 +35,7 @@ experience.short_description = %q{
 }
 experience.template = "info_image2"
 experience.orientation = "left"
-experience.title_tag = "h4"
+experience.title_tag = "h5"
 experience.image.attach(io: Rails.root.join("vendor/assets/images/pictures/experience.png").open, filename: "experience.png")
 Mobility.with_locale(:cn) {
 	experience.title = "我们的经验"
@@ -46,7 +45,7 @@ Mobility.with_locale(:cn) {
 	}
 }
 experience.save
-Section.create(page_id: @about_page.id, snippet_id: experience.id, css_class: "small-section", order_no: 3)
+Section.create(page_id: @about_page.id, snippet_id: experience.id, css_class: "small-section pt-0", order_no: 3)
 puts "Create Snippet: #{experience.name}"
 
 # create approach
@@ -58,7 +57,7 @@ approach.short_description = %q{
 }
 approach.template = "info_image2"
 approach.orientation = "left"
-approach.title_tag = "h4"
+approach.title_tag = "h5"
 approach.image.attach(io: Rails.root.join("vendor/assets/images/pictures/approach.png").open, filename: "approach.png")
 Mobility.with_locale(:cn) {
 	approach.title = "我们的方法"

@@ -70,6 +70,7 @@ Rails.application.routes.draw do
 		# i18n Scope for id
 
 		resources :investor_inquiries, :only => [:create]
+		resources :articles, :only => [:index, :show]
 
 		match "/search", :to => 'search#index', via: :post, as: :search
 		# route to pages

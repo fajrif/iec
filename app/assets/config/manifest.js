@@ -5,6 +5,7 @@
 //= link application.js
 //= link application.css
 //= link password-addon.init.js
+//= link jquery.marquee.min.js
 //= link jquery-ui/widget.js
 //= link jquery-ui/widgets/sortable.js
 //= link pdfjs_viewer/application.css

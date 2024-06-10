@@ -261,7 +261,7 @@
                         columnWidth: '.grid-sizer',
                     }
                 });
-							var active_filter = $('.portfolio-filter-tab-1 > li.nav.active > a.nav-link').attr("data-filter");
+							var active_filter = $('.portfolio-filter > li.nav.active > a.nav-link').attr("data-filter");
 								console.log(active_filter);
                 _this.isotope({filter: active_filter});
                 isotopeObjs.push(_this);

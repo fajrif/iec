@@ -20,7 +20,7 @@ Mobility.with_locale(:cn) {
 	@news.caption = "新闻媒体"
 }
 @news.save
-Section.create(page_id: @home_page.id, snippet_id: @news.id, css_class: "small-section", order_no: 2)
+Section.create(page_id: @home_page.id, snippet_id: @news.id, css_class: "small-section pt-0", order_no: 2)
 puts "Create Snippet: #{@news.name}"
 
 # create about_company
@@ -113,7 +113,7 @@ link_button.route_category = 2
 link_button.objectable = @media_page
 link_button.link_text = "view_media"
 link_button.save
-Section.create(page_id: @home_page.id, snippet_id: media.id, css_class: "p-0", order_no: 7)
+Section.create(page_id: @home_page.id, snippet_id: media.id, css_class: "half-section pt-0", order_no: 7)
 puts "Create Snippet: #{media.name}"
 
 # create presentation
@@ -132,7 +132,7 @@ link_button.route_category = 2
 link_button.objectable = @compro_file
 link_button.link_text = "view_title"
 link_button.save
-Section.create(page_id: @home_page.id, snippet_id: presentation.id, css_class: "half-section pb-0", order_no: 8)
+Section.create(page_id: @home_page.id, snippet_id: presentation.id, bg_color: "bg-green", css_class: "half-section", order_no: 8)
 puts "Create Snippet: #{presentation.name}"
 
 # create contact_us

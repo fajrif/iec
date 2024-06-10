@@ -373,11 +373,18 @@ header nav .navbar-nav.text-normal > li > a {
 	line-height: 28px;
 }
 
+#about_desc .info_short_desc,
 #about_sumatra_kruh .info_short_desc,
 #about_java_citarum .info_short_desc {
 	font-weight: 600;
 	font-size: 40px;
 	line-height: 42px;
+}
+
+#experience .info_short_desc,
+#approach .info_short_desc {
+	margin-bottom: 0 !important;
+	margin-top: 30px !important;
 }
 
 .form-label {
@@ -398,3 +405,19 @@ video {
 		outline: none;
 }
 video:focus { outline:none; }
+
+/* running text */
+.scroll-box {
+	width: 100%;
+	height: 5em;
+	overflow: hidden;
+	position: relative;
+}
+.scroll-text {
+	width: 100%;
+	position: absolute;
+	white-space: nowrap;
+	line-height: normal;
+	font-size: 60px;
+	font-weight: 600;
+}

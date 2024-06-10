@@ -63,7 +63,7 @@ Table of contents:
 	--very-light-blue-color: #CCDBFD;
 	--grey-color: #E7E7E7;
 	--medium-grey-color: #A1A198;
-	--light-grey-color: #CECDC8;
+	--light-grey-color: #FBFBFB;
 	--very-light-grey-color: #E3E3E0;
 }
 
@@ -450,6 +450,9 @@ h6 {
 }
 .text-green {
   color: var(--green-color) !important;
+}
+.text-medium-green {
+  color: var(--medium-green-color) !important;
 }
 .text-red {
 	color: var(--bs-form-invalid-color) !important;
@@ -1919,6 +1922,14 @@ textarea.input-bg {
   background: #fff;
   border-color: #fff !important;
   color: var(--dark-grey-color);
+}
+
+.btn.btn-line {
+	padding: 0;
+}
+.btn.btn-line:hover,
+.btn.btn-line:focus {
+  background: transparent;
 }
 
 /* button rounded */

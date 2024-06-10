@@ -7,6 +7,7 @@ en:
     attributes:
       investor_inquiry:
         name: "Name"
+        company_name: "Company name"
         email: "Email"
         phone: "Phone"
         message: "Message"
