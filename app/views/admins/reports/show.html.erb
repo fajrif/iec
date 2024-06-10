@@ -32,6 +32,12 @@
 						<td><b>Report Type</b></td>
 						<td><%= badge_category(@report.report_type) %></td>
 					</tr>
+					<% if @report.author %>
+					<tr>
+						<td><b>Author</b></td>
+						<td><%= link_to @report.author.name, admins_author_path(@report.author) %></td>
+					</tr>
+					<% end %>
 					<tr>
 						<td><b>Short Description</b></td>
 						<td><%= @report.short_description %></td>

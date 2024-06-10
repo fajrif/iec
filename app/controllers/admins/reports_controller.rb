@@ -55,7 +55,7 @@ class Admins::ReportsController < Admins::BaseController
   private
 
   def params_report
-		params.require(:report).permit(:file, :title, :short_description, :published_date, :status, :report_type_id, :private, :read_only)
+		params.require(:report).permit(:file, :title, :short_description, :published_date, :status, :report_type_id, :private, :read_only, :author_id)
   end
 
   def set_report

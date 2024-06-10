@@ -39,6 +39,7 @@ Rails.application.routes.draw do
 			resources :reports
 			resources :report_types
 			resources :investor_inquiries, :only => [:index, :show, :destroy]
+			resources :authors
 			resources :archives
 			resources :archive_types
 			resources :pages do

@@ -1,14 +1,14 @@
 <%- portfolios = Portfolio.first(2) %>
 <% unless portfolios.empty? %>
 <div class="container-xl">
-	<div class="row justify-content-start align-items-center sm-margin-20px-bottom wow animate__fadeIn">
+	<div class="row justify-content-start align-items-center sm-no-margin-bottom wow animate__fadeIn">
 		<div class="col-6 col-lg-7 text-gray">
 			<% unless snippet.caption.blank? %>
-				<span class="d-block mb-2 text-uppercase"><%= snippet.caption %></span>
+				<span class="d-block mb-2 text-uppercase text-caption"><%= snippet.caption %></span>
 			<% end %>
-			<h4 class="font-weight-800 mb-4"><%= snippet.title %></h4>
+			<h5 class="font-weight-800 mb-4"><%= snippet.title %></h5>
 		</div>
-		<div class="col-6 col-lg-5 no-padding-lr text-start text-end">
+		<div class="col-6 col-lg-5 no-padding-lr text-start text-md-end">
 			<%- if link_button = snippet.link_buttons.first -%>
 				<%= render_link_text_url(link_button, "btn btn-medium btn-transparent-iec text-gray text-uppercase btn-rounded btn-border margin-30px-bottom") %>
 			<%- end -%>
@@ -27,7 +27,7 @@
 									<%= image_tag url_for(portfolio.image), alt: portfolio.name %>
 								</a>
 							</div>
-							<div class="post-details margin-20px-bottom w-95">
+							<div class="post-details margin-20px-bottom w-95 sm-w-100">
 								<a href="<%= page_path(portfolio.page) %>" class="post-title font-weight-600 text-extra-large text-black text-uppercase d-block margin-10px-bottom sm-margin-5px-bottom"><%= portfolio.name %></a>
 							</div>
 						</div>

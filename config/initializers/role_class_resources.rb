@@ -6,6 +6,7 @@ GENERAL_CLASS_RESOURCES = [
 DEVELOPER_CLASS_RESOURCES = [
 	"archives",
 	"reports",
+	"authors",
 	"articles",
 	"galleries",
 	"members",

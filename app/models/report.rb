@@ -9,6 +9,7 @@ class Report < ApplicationRecord
 
 	has_one_attached :file, dependent: :purge
 	belongs_to :report_type
+	belongs_to :author, optional: true
 
 	validates_presence_of :title
 	validates_uniqueness_of :title

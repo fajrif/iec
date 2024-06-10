@@ -31,6 +31,7 @@
 						</div>
 						<div class="card-body">
 							<%= f.association :report_type, as: :select %>
+							<%= f.association :author, as: :select %>
 							<%= f.input :published_date, as: :string, input_html: { class: "datetimepicker", value: get_input_date_value(f.object.published_date) } %>
 							<%= f.input :status, as: :select, collection: get_published_status, value_method: :first, label_method: :last %>
 							<%= f.input :private, as: :select, collection: get_private_status, value_method: :first, label_method: :last %>

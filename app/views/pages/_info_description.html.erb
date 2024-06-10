@@ -31,7 +31,7 @@
 				</div>
 			</div>
 		<% else %>
-			<div class="col-6 wow animate__fadeInUp">
+			<div class="col-12 col-md-6 wow animate__fadeInUp">
 				<% unless snippet.title.blank? %>
 					<%= content_tag(header_tag.to_sym, snippet.title, class: "text-uppercase #{text_width}") %>
 				<% end %>
@@ -39,7 +39,7 @@
 					<%= raw snippet.short_description %>
 				</div>
 			</div>
-			<div class="col-6 padding-five-lr wow animate__fadeInUp">
+			<div class="col-12 col-md-6 padding-five-lr wow animate__fadeInUp">
 				<div class="info_desc <%= desc_width %> margin-30px-bottom sm-margin-15px-bottom">
 					<%= raw snippet.description %>
 				</div>

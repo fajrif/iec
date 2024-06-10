@@ -262,7 +262,8 @@ module AdminHelper
 
   def is_admins_archives_page?
 		controller.controller_name == "archives" ||
-		controller.controller_name == "reports"
+		controller.controller_name == "reports" ||
+		controller.controller_name == "authors"
   end
 
   def is_admins_content_page?

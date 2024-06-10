@@ -6,12 +6,12 @@
 		<%= flash_message2 %>
 		<%= simple_form_for @investor_inquiry || InvestorInquiry.new, url: investor_inquiries_path, method: :post, remote: true do |f| %>
 			<div class="row">
-				<div class="col-6">
+				<div class="col-12 col-md-6">
 					<%= f.input :name %>
 					<%= f.input :company_name %>
 					<%= f.input :email %>
 				</div>
-				<div class="col-6">
+				<div class="col-12 col-md-6">
 					<%= f.input :phone %>
 					<%= f.input :message, as: :text, input_html: { rows: "8" }	%>
 					<% if @show_recaptcha_v2 %>

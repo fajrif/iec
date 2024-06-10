@@ -14,7 +14,7 @@
 									<%= image_tag url_for(portfolio.image), alt: portfolio.name %>
 								</a>
 							</div>
-							<div class="post-details margin-20px-bottom w-95">
+							<div class="post-details margin-20px-bottom w-95 sm-w-100">
 								<a href="<%= page_path(portfolio.page) %>" class="post-title font-weight-600 text-extra-large text-black text-uppercase d-block margin-10px-bottom sm-margin-5px-bottom"><%= portfolio.name %></a>
 								<span class="post-author text-extra-dark-gray d-block margin-15px-bottom"><%= portfolio.description %></span>
 								<%= link_to page_path(portfolio.page), class: "btn btn-medium btn-iec btn-rounded margin-10px-top sm-margin-10px-top" do %>

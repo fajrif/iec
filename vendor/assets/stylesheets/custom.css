@@ -400,6 +400,9 @@ header nav .navbar-nav.text-normal > li > a {
 			max-height: 150%;
 			max-width: 150%;
 		}
+		.btn.btn-rounded.btn-medium {
+			padding: 8px 10px;
+		}
 }
 video::-webkit-media-controls {
     display:none !important;

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_28_013927) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_10_132745) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -118,6 +118,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_28_013927) do
     t.index ["category_id"], name: "index_articles_on_category_id"
     t.index ["name"], name: "index_articles_on_name", unique: true
     t.index ["slug"], name: "index_articles_on_slug", unique: true
+  end
+
+  create_table "authors", force: :cascade do |t|
+    t.string "name", default: "", null: false
+    t.string "title", default: "", null: false
+    t.string "company_name", default: "", null: false
+    t.string "phone", default: "", null: false
+    t.string "email", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "banner_sections", force: :cascade do |t|
@@ -245,6 +255,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_28_013927) do
     t.datetime "updated_at", null: false
     t.integer "private", default: 0
     t.integer "read_only", default: 0
+    t.bigint "author_id"
+    t.index ["author_id"], name: "index_reports_on_author_id"
     t.index ["report_type_id"], name: "index_reports_on_report_type_id"
     t.index ["title"], name: "index_reports_on_title", unique: true
   end
