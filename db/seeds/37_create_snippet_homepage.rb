@@ -3,9 +3,9 @@ Snippet.delete_all
 
 # create running_text
 running_text = Snippet.new(name: "running_text")
-running_text.title = "Powering Progress, Nurturing Nature: Our Energy, Your Future"
+running_text.title = "Powering Progress, Nurturing Nature: Our Energy, Your Future."
 Mobility.with_locale(:cn) {
-	running_text.title = "推动进步，培育自然：我们的能源，您的未来"
+	running_text.title = "推动进步，培育自然：我们的能源，您的未来。"
 }
 running_text.save
 Section.create(page_id: @home_page.id, snippet_id: running_text.id, css_class: "small-section", order_no: 1)

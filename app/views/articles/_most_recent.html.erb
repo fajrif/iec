@@ -11,23 +11,22 @@
 		</div>
 		<div class="row">
 			<div class="col-12 blog-content">
-				<ul class="blog-classic blog-wrapper grid grid-loading grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-small">
+				<ul class="hover-option4 blog-post-style3 blog-grid blog-wrapper grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large">
 					<li class="grid-sizer"></li>
 					<% @articles.each do |article| %>
-						<!-- start post item -->
-						<li class="grid-item last-paragraph-no-margin wow animate__fadeInUp">
-							<div class="blog-post blog-post-style1 text-start">
-								<div class="post-details margin-20px-bottom xs-no-margin-bottom w-95">
-									<span class="post-author text-medium text-extra-dark-gray text-uppercase d-block margin-10px-bottom sm-margin-5px-bottom"><%= article.try(:published_date).try(:strftime, '%d/%m/%Y') %></span>
-									<a href="<%= article_path(article) %>" class="post-title font-weight-400 text-extra-large text-extra-dark-gray text-uppercase d-block margin-10px-bottom sm-margin-5px-bottom"><%= article.title %></a>
-									<span class="post-author text-extra-dark-gray d-block margin-15px-bottom"><%= article.short_description %></span>
-									<%= link_to article_path(article), class: "btn btn-iec btn-medium btn-rounded" do %>
-										<%= t('global.read_more') %> <i class="iec-icon-right icon-very-small" aria-hidden="true"></i>
-									<% end %>
-								</div>
+					<!-- start post item -->
+					<li class="grid-item last-paragraph-no-margin text-center text-sm-start wow animate__fadeInUp">
+						<div class="blog-post bg-light-grey border-radius-10">
+							<div class="post-details padding-40px-all md-padding-20px-all">
+								<span class="post-author text-medium text-extra-dark-gray text-uppercase d-block margin-10px-bottom sm-margin-5px-bottom"><%= article.try(:published_date).try(:strftime, '%d/%m/%Y') %></span>
+								<a href="<%= article_path(article) %>" class="alt-font post-title font-weight-400 text-extra-large text-extra-dark-gray d-block margin-10px-bottom sm-margin-5px-bottom"><%= article.title %></a>
+								<%= link_to article_path(article), class: "btn btn-medium btn-line text-gray text-uppercase margin-20px-top sm-margin-10px-top" do %>
+									<%= t('global.read_more') %> <i class="fa-solid fa-arrow-right icon-very-small" aria-hidden="true"></i>
+								<% end %>
 							</div>
-						</li>
-						<!-- end post item -->
+						</div>
+					</li>
+					<!-- end post item -->
 					<% end %>
 				</ul>
 			</div>

@@ -373,7 +373,11 @@ header nav .navbar-nav.text-normal > li > a {
 	line-height: 28px;
 }
 
-#about_desc .info_short_desc,
+#about_desc .info_short_desc {
+	font-weight: 600;
+	font-size: 26px;
+	line-height: 28px;
+}
 #about_sumatra_kruh .info_short_desc,
 #about_java_citarum .info_short_desc {
 	font-weight: 600;
