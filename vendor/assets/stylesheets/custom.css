@@ -372,7 +372,7 @@ header nav .navbar-nav.text-normal > li > a {
 
 #sumatra_kruh_video .info_short_desc,
 #java_citarum_video .info_short_desc {
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 24px;
 	line-height: 28px;
 }
@@ -394,28 +394,9 @@ header nav .navbar-nav.text-normal > li > a {
 	margin-bottom: 0 !important;
 	margin-top: 30px !important;
 }
-
-.form-label {
-	font-weight: 600;
+#committee_charter a:hover {
+	text-decoration: underline;
 }
-
-@media (max-width: 767px) {
-		.htms-video {
-			max-height: 150%;
-			max-width: 150%;
-		}
-		.btn.btn-rounded.btn-medium {
-			padding: 8px 10px;
-		}
-}
-video::-webkit-media-controls {
-    display:none !important;
-}
-video {
-    clip-path: inset(1px 1px);
-		outline: none;
-}
-video:focus { outline:none; }
 
 /* running text */
 .scroll-box {
@@ -432,3 +413,69 @@ video:focus { outline:none; }
 	font-size: 60px;
 	font-weight: 600;
 }
+
+.form-label {
+	font-weight: 600;
+}
+
+@media (max-width: 767px) {
+		.htms-video {
+			max-height: 150%;
+			max-width: 150%;
+		}
+		.btn.btn-rounded.btn-medium {
+			padding: 8px 10px;
+		}
+		#sumatra_kruh_video .info_short_desc,
+		#java_citarum_video .info_short_desc {
+			font-weight: 400;
+			font-size: 22px;
+			line-height: 26px;
+		}
+		#about_desc .info_short_desc {
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 26px;
+		}
+		#about_sumatra_kruh .info_short_desc,
+		#about_java_citarum .info_short_desc {
+			font-weight: 600;
+			font-size: 28px;
+			line-height: 30px;
+		}
+		#experience .info_short_desc,
+		#approach .info_short_desc {
+			margin-bottom: 0 !important;
+			margin-top: 30px !important;
+		}
+
+		#board_committees .blog-post.border-radius-10 {
+			border-radius: 0 !important;
+		}
+
+		.feature-box-1 {
+			padding-top: 20px !important;
+		}
+		.feature-box-1 .char-value {
+			margin-bottom: 20px !important;
+		}
+
+		.scroll-box {
+			height: 3em;
+		}
+		.scroll-text {
+			font-size: 40px;
+		}
+		input, textarea, select {
+			margin: 0 !important;
+		}
+}
+video::-webkit-media-controls {
+    display:none !important;
+}
+video {
+    clip-path: inset(1px 1px);
+		outline: none;
+}
+video:focus { outline:none; }
+

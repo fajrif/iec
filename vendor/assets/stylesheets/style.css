@@ -43,8 +43,8 @@ Table of contents:
 	--black-color: #000;
 	--iec-yellow-color: #E9F40B;
 	--iec-grey-color: #636363;
-	--iec-dark-grey-color: #3F3936;
-	--dark-grey-color: #3F3936;
+	--iec-dark-grey-color: #000;
+	--dark-grey-color: #000;
 	--red-color: #FF6635;
 	--medium-red-color: #FD8F69;
 	--light-red-color: #FFB9A3;
@@ -6395,6 +6395,9 @@ input .required-error {
 }
 .h-10px {
   height: 10px;
+}
+.h-50px {
+  height: 50px;
 }
 .h-80px {
   height: 80px;
@@ -13120,17 +13123,17 @@ figure {
 
 /* feature box style 6 */
 .feature-box-6 {
-  padding-left: 65px;
+  padding-right: 65px;
 }
 .feature-box-6 i {
   position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+  top: 20%;
+  right: 0;
+  transform: translateY(-20%);
+  -webkit-transform: translateY(-20%);
+  -moz-transform: translateY(-20%);
+  -ms-transform: translateY(-20%);
+  -o-transform: translateY(-20%);
 }
 
 /* feature box style 7 */

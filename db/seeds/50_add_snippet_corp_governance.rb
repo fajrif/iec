@@ -6,7 +6,7 @@ Mobility.with_locale(:cn) {
 }
 board_committees.save
 
-Section.create(page_id: @corporate_governance_page.id, snippet_id: board_committees.id, css_class: "half-section pt-0", order_no: 2)
+Section.create(page_id: @corporate_governance_page.id, snippet_id: board_committees.id, bg_color: "bg-grey", css_class: "half-section", order_no: 2)
 puts "Assign Snippet #{board_committees.name} to Corporate Governance"
 
 # create committee_charter

@@ -1,11 +1,10 @@
 <!-- start page single banner -->
 <section class="wow animate__fadeIn parallax" data-parallax-background-ratio="0.5" style="background-image:url('<%= image_url('banners/banner-indo-energy.png') %>');">
-		<div class="opacity-extra-medium bg-black"></div>
 		<div class="container position-relative">
 			<div class="row align-items-center">
 				<div class="col-12 d-flex flex-column justify-content-center text-start extra-small-screen page-title-large">
 					<h1 class="text-white-2 text-uppercase font-weight-400 letter-spacing-minus-1 margin-10px-bottom"><%= @article.title %></h1>
-					<span class="text-very-light-gray text-uppercase margin-20px-bottom"><%= @article.try(:category).try(:name) %></span>
+					<span class="text-very-light-gray text-uppercase"><%= @article.try(:category).try(:name) %></span>
 				</div>
 			</div>
 		</div>
