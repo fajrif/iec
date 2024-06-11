@@ -1229,7 +1229,7 @@ label {
 .form-select,
 .form-control {
   color: var(--iec-dark-grey-color);
-	font-weight: lighter;
+	font-weight: normal;
 }
 
 /* input */
