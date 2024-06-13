@@ -5,6 +5,9 @@
 <section id="<%= banner.section_id %>" class="p-0 single-banner parallax" data-parallax-background-ratio="0.5" style="background-image:url('<%= url_for(banner.image) if banner.image.attached? %>');">
 <% end %>
 	<div class="full-screen <%= @banner_text_color %>">
+		<% if banner.section_id == "banner_home" %>
+			<div id="container"></div>
+		<% end %>
 		<div class="container-xl position-relative h-100">
 			<div class="row h-100 align-items-center">
 				<div class="col-xl-10 col-md-10">
@@ -24,3 +27,7 @@
 	</div>
 </section>
 <!-- end page single banner -->
+
+<% if banner.section_id == "banner_home" %>
+	<%= render "banner_home" %>
+<% end %>
