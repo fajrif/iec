@@ -17,8 +17,15 @@
 					<!-- start post item -->
 					<li class="grid-item last-paragraph-no-margin text-center text-sm-start wow animate__fadeInUp">
 						<div class="blog-post bg-light-grey border-radius-10">
-							<div class="post-details padding-40px-all md-padding-20px-all">
-								<span class="post-author text-medium text-extra-dark-gray text-uppercase d-block margin-10px-bottom sm-margin-5px-bottom"><%= article.try(:published_date).try(:strftime, '%d/%m/%Y') %></span>
+							<% if article.image.attached? %>
+							<div class="blog-post-images overflow-hidden position-relative padding-10px-all">
+								<a href="<%= article_path(article) %>">
+									<%= image_tag article.image.variant(resize_to_limit: [345,253]), class: "border-radius-8" %>
+								</a>
+							</div>
+							<% end %>
+							<div class="post-details padding-40px-all md-padding-20px-all padding-10px-top">
+								<span class="post-author text-medium text-extra-dark-gray d-block margin-10px-bottom sm-margin-5px-bottom"><%= article.try(:published_date).try(:strftime, '%b %d, %Y') %></span>
 								<a href="<%= article_path(article) %>" class="alt-font post-title font-weight-400 text-extra-large text-extra-dark-gray d-block margin-10px-bottom sm-margin-5px-bottom"><%= article.title %></a>
 								<%= link_to article_path(article), class: "btn btn-medium btn-line text-gray text-uppercase margin-20px-top sm-margin-10px-top" do %>
 									<%= t('global.read_more') %> <i class="fa-solid fa-arrow-right icon-very-small" aria-hidden="true"></i>

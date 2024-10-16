@@ -21,13 +21,25 @@
 			<% template = snippet.template %>
 			<% if template.blank? %>
 				<!-- start section -->
-				<section id="<%= snippet.name %>" class="<%= "#{section_id} #{bg_color} #{css_class}".strip %>">
+				<% if bg_color == 'bg-image' %>
+					<% if snippet.background.attached? %>
+						<section id="<%= snippet.name %>" class="<%= "#{section_id} #{bg_color} #{css_class}".strip %>" style="background-image:url('<%= url_for(snippet.background) %>');">
+					<% end %>
+				<% else %>
+					<section id="<%= snippet.name %>" class="<%= "#{section_id} #{bg_color} #{css_class}".strip %>">
+				<% end %>
 					<%= render snippet.name, snippet: snippet, bg_color: bg_color %>
 				</section>
 				<!-- end section -->
 			<% else %>
 				<!-- start section -->
-				<section id="<%= snippet.name %>" class="<%= "#{section_id} #{bg_color} #{css_class}".strip %>">
+				<% if bg_color == 'bg-image' %>
+					<% if snippet.background.attached? %>
+						<section id="<%= snippet.name %>" class="<%= "#{section_id} #{bg_color} #{css_class}".strip %>" style="background-image:url('<%= url_for(snippet.background) %>');">
+					<% end %>
+				<% else %>
+					<section id="<%= snippet.name %>" class="<%= "#{section_id} #{bg_color} #{css_class}".strip %>">
+				<% end %>
 					<%= render template, snippet: snippet, bg_color: bg_color %>
 				</section>
 				<!-- end section -->

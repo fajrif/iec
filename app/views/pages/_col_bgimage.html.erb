@@ -16,7 +16,6 @@
 <%- header_tag = snippet.title_tag unless snippet.title_tag.blank? -%>
 
 <%- no_margin = 'last-paragraph-no-margin' -%>
-<%- no_margin = '' if snippet.has_link_button? -%>
 
 <!-- start features item -->
 <div class="col margin-20px-bottom wow animate__fadeIn" data-wow-delay="0.<%= index + 2 %>s">
@@ -24,11 +23,11 @@
 		<%= content_tag(header_tag.to_sym, snippet.title, class: "font-weight-320 text-white-2 text-uppercase margin-10px-bottom d-inline-block #{title_width}") %>
 		<div class="d-flex flex-row justify-content-start <%= justify_align %> align-items-end <%= height %>">
 			<div class="<%= "text-white-2 #{no_margin} #{desc_width}" %>">
-				<div class="desc mb-3">
+				<div class="desc">
 					<%= raw snippet.short_description %>
 				</div>
 				<% snippet.link_buttons.each_with_index do |link_button, index| %>
-					<%= render_link_text_url(link_button, "btn btn-medium btn-transparent-iec btn-rounded #{'margin-20px-top' if index == 0} margin-10px-bottom d-block w-200px") %>
+					<%= render_link_text_url(link_button, "btn btn-small btn-line text-white text-uppercase #{'margin-10px-top' if index == 0}") %>
 				<% end %>
 			</div>
 		</div>

@@ -2,7 +2,7 @@
 <%- link_buttons = snippet.link_buttons -%>
 <%- margin_button = 'margin-10px-right' if link_buttons.size > 1 -%>
 <div class="container-xl wow animate__fadeIn">
-	<div class="bg-green-gradient padding-100px-tb padding-50px-lr sm-padding-30px-all border-radius-20 <%= text_color %>">
+	<div class="bg-medium-green padding-50px-all sm-padding-20px-all border-radius-20 <%= text_color %>">
 		<div class="row">
 			<div class="col-md-8 last-paragraph-no-margin sm-margin-30px-bottom">
 				<h4 class="text-uppercase margin-10px-bottom"><%= snippet.title %></h4>
@@ -13,7 +13,7 @@
 			<div class="col-md-4 d-flex justify-content-start justify-content-md-end align-items-center sm-no-margin-bottom">
 				<div>
 					<% link_buttons.each_with_index do |link_button, index| %>
-						<%= render_link_text_url(link_button, "btn btn-medium btn-rounded btn-border #{btn_color} #{margin_button if index == 0}") %>
+						<%= render_link_text_url(link_button, "btn btn-large btn-rounded btn-border text-uppercase btn-white #{margin_button if index == 0}") %>
 					<% end %>
 				</div>
 			</div>

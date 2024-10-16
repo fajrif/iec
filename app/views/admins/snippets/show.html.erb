@@ -36,6 +36,17 @@
 							</td>
 						</tr>
 						<% end %>
+						<% if @snippet.background.attached? %>
+						<tr>
+							<td><b>Section Background</b></td>
+							<td>
+									<%= image_tag @snippet.background.variant(resize_to_limit: [100,100]) %>
+									<%= link_to delete_attachment_admins_snippet_path(@snippet.id, @snippet.background.id), :class => "ms-2 btn btn-danger btn-sm", :data => { :confirm => 'Are You sure want to delete this image?' }, :method => :delete do %>
+										<i class="ri-delete-bin-fill"></i>
+									<% end %>
+							</td>
+						</tr>
+						<% end %>
 						<tr>
 							<td><b>Title</b></td>
 							<td><h5 class="fs-14 mb-0 text-body"><%= @snippet.title %></h5></td>

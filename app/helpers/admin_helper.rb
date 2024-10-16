@@ -97,6 +97,7 @@ module AdminHelper
 			"col_bgimage",
 			"call_to_action1",
 			"call_to_action2",
+			"call_to_action3",
 			"image_display",
 			"display_image",
 			"video_display",
@@ -127,7 +128,8 @@ module AdminHelper
 			"bg-green-gradient",
 			"bg-grey",
 			"bg-dark-grey",
-			"bg-black"
+			"bg-black",
+			"bg-image"
 		]
 	end
 

@@ -55,7 +55,7 @@ class Admins::SnippetsController < Admins::BaseController
   private
 
   def params_snippet
-    params.require(:snippet).permit(:image, :name, :title, :caption, :short_description, :description, :title_tag, :text_color, :template, :bg_color, :css_class, :css_title, :css_desc, :orientation, :video_url, :parent_id)
+    params.require(:snippet).permit(:image, :background, :name, :title, :caption, :short_description, :description, :title_tag, :text_color, :template, :bg_color, :css_class, :css_title, :css_desc, :orientation, :video_url, :parent_id)
   end
 
 	def set_snippet

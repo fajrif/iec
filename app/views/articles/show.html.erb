@@ -1,5 +1,6 @@
 <!-- start page single banner -->
-<section class="wow animate__fadeIn parallax" data-parallax-background-ratio="0.5" style="background-image:url('<%= image_url('banners/banner-indo-energy.png') %>');">
+<section class="wow animate__fadeIn parallax" data-parallax-background-ratio="0.5" style="background-image:url('<%= url_for(@article.image) %>');">
+		<div class="opacity-medium bg-black"></div>
 		<div class="container position-relative">
 			<div class="row align-items-center">
 				<div class="col-12 d-flex flex-column justify-content-center text-start extra-small-screen page-title-large">
@@ -15,7 +16,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12 margin-50px-bottom">
-				<span class="post-author text-medium text-extra-dark-gray text-uppercase d-block margin-10px-bottom sm-margin-5px-bottom"><%= @article.try(:published_date).try(:strftime, '%d/%m/%Y') %></span>
+				<span class="post-author text-medium text-extra-dark-gray d-block margin-10px-bottom sm-margin-5px-bottom"><%= @article.try(:published_date).try(:strftime, '%b %d, %Y') %></span>
 				<h5 class="font-weight-400 text-extra-dark-gray text-uppercase"><%= @article.title %></h5>
 				<div class="line-height-26">
 					<%= raw @article.content %>

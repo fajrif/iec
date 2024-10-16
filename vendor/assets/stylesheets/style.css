@@ -43,7 +43,7 @@ Table of contents:
 	--black-color: #000;
 	--iec-yellow-color: #E9F40B;
 	--iec-grey-color: #636363;
-	--iec-dark-grey-color: #000;
+	--iec-dark-grey-color: #636363;
 	--dark-grey-color: #000;
 	--red-color: #FF6635;
 	--medium-red-color: #FD8F69;
@@ -725,7 +725,7 @@ a.text-very-light-gray-hover:hover {
 
 /* text property */
 .text-transform-unset {
-  text-transform: unset;
+  text-transform: unset !important;
 }
 .text-decoration-underline {
   text-decoration: underline;
@@ -990,10 +990,10 @@ a.text-very-light-gray-hover:hover {
   background-color: var(--iec-dark-grey-color);
 }
 .bg-extra-medium-gray {
-  background-color: #cccccc;
+  background-color: #F0F0F0;
 }
 .bg-grey {
-  background-color: #C6C6C6;
+  background-color: #F0F0F0;
 }
 .bg-extra-medium-grey {
   background-color: var(--grey-color);
@@ -1917,13 +1917,13 @@ textarea.input-bg {
 }
 .btn.btn-transparent-iec {
   background: transparent;
-  border-color: #fff !important;
+  /*border-color: #fff !important;*/
   color: #fff;
 }
 .btn.btn-transparent-iec:hover,
 .btn.btn-transparent-iec:focus {
-  background: #fff;
-  border-color: #fff !important;
+  background: transparent;
+  /*border-color: #fff !important;*/
   color: var(--dark-grey-color);
 }
 
@@ -1940,7 +1940,7 @@ textarea.input-bg {
   border-radius: 10px;
 }
 .btn.btn-border {
-  border: 1px solid var(--dark-grey-color);
+  /*border: 1px solid var(--dark-grey-color);*/
 }
 .btn.btn-rounded.btn-very-small {
   padding: 1px 23px 1px;
@@ -1952,7 +1952,7 @@ textarea.input-bg {
   padding: 8px 30px;
 }
 .btn.btn-rounded.btn-large {
-  padding: 5px 34px;
+  padding: 14px 34px;
 }
 .btn.btn-rounded.btn-extra-large {
   padding: 8px 38px;
@@ -2413,6 +2413,7 @@ input .required-error {
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
 }
+.bg-image,
 .cover-background {
   position: relative !important;
   background-size: cover !important;

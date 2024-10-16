@@ -41,8 +41,8 @@ header nav .navbar-nav > li > a {
 }
 .btn.btn-white:hover,
 .btn.btn-white:focus {
-	background: transparent;
-	border-color: var(--iec-dark-grey-color);
+	background: #fefefe;
+	border-color: #fefefe;
 	color: var(--iec-dark-grey-color);
 }
 .bootstrap-select .btn.show,
@@ -479,3 +479,6 @@ video {
 }
 video:focus { outline:none; }
 
+#presentation .col-md-8 h5:last-child {
+	margin-bottom: 0;
+}
