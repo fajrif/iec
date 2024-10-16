@@ -2357,20 +2357,27 @@ input .required-error {
   width: 100%;
 }
 .htms-video {
-  background-color: #fff;
-  height: auto;
-  left: 50%;
-  max-height: 100%;
-  max-width: 100%;
-  position: absolute !important;
-  top: 50%;
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  width: auto;
-  z-index: -3;
+  background-color: #000;
+  /*height: auto;*/
+  /*left: 50%;*/
+  /*max-height: 100%;*/
+  /*max-width: 100%;*/
+  /*position: absolute !important;*/
+  /*top: 50%;*/
+  /*-ms-transform: translate(-50%, -50%);*/
+  /*-webkit-transform: translate(-50%, -50%);*/
+  /*transform: translate(-50%, -50%);*/
+  /*-moz-transform: translate(-50%, -50%);*/
+  /*-o-transform: translate(-50%, -50%);*/
+  /*width: auto;*/
+  /*z-index: -3;*/
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 .video-wrapper iframe {
   height: 100%;

@@ -474,7 +474,7 @@ video::-webkit-media-controls {
     display:none !important;
 }
 video {
-    clip-path: inset(1px 1px);
+    /*clip-path: inset(1px 1px);*/
 		outline: none;
 }
 video:focus { outline:none; }
