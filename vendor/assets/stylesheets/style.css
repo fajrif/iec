@@ -14333,7 +14333,7 @@ figure {
   display: inline-block;
   float: none;
 	flex: 0 0 auto;
-	width: 33.33333333%;
+	width: 25%;
 }
 .tab-style1 .nav-tabs li a {
   margin: 0;
@@ -14347,9 +14347,14 @@ figure {
   border: none;
   background-color: transparent;
 }
+.tab-style1 .nav-tabs > li > a h5 {
+  font-size: 25px;
+  line-height: 25px;
+}
 .tab-style1 .nav-tabs > li > a:hover h5,
 .tab-style1 .nav-tabs > li > a.active h5 {
 	color: var(--green-color) !important;
+  text-decoration: underline;
 }
 .tab-style1 .nav-tabs li:hover i,
 .tab-style1 .nav-tabs li .active i {
