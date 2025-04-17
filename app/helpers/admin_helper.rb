@@ -128,6 +128,7 @@ module AdminHelper
 			"bg-green-gradient",
 			"bg-grey",
 			"bg-dark-grey",
+			"bg-very-dark-grey",
 			"bg-black",
 			"bg-image"
 		]

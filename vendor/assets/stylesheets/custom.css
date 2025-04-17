@@ -401,7 +401,7 @@ header nav .navbar-nav.text-normal > li > a {
 /* running text */
 .scroll-box {
 	width: 100%;
-	height: 5em;
+	height: 10em;
 	overflow: hidden;
 	position: relative;
 }
@@ -410,7 +410,7 @@ header nav .navbar-nav.text-normal > li > a {
 	position: absolute;
 	white-space: nowrap;
 	line-height: normal;
-	font-size: 60px;
+	font-size: 48px;
 	font-weight: 600;
 }
 
@@ -461,10 +461,11 @@ header nav .navbar-nav.text-normal > li > a {
 		}
 
 		.scroll-box {
-			height: 3em;
+			height: 8em;
 		}
 		.scroll-text {
-			font-size: 40px;
+			font-size: 27px;
+      margin-left: 20px;
 		}
 		input, textarea, select {
 			margin: 0 !important;

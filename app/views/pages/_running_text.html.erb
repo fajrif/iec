@@ -1,7 +1,7 @@
-<div class="container-fluid no-padding-lr">
-	<div class="scroll-box">
-		<div class="marquee scroll-text text-medium-green">
-			<%= snippet.title %>
+<div class="container-fluid no-padding-lr bg-green">
+	<div class="scroll-box d-flex justify-content-center align-items-center text-start text-md-center">
+		<div class="marquee scroll-text text-white-2">
+      Powering Progress, Nurturing Nature: <br/>Our Energy, Your Future
 		</div>
 	</div>
 </div>
@@ -10,14 +10,14 @@
 	<%= javascript_include_tag "jquery.marquee.min.js" %>
 	<script>
 		jQuery(document).ready(function($){
-			$('.marquee').marquee({
-				speed: 150,
-				gap: 100,
-				delayBeforeStart: 0,
-				direction: 'left',
-				duplicated: true,
-				pauseOnHover: true
-			});
+			// $('.marquee').marquee({
+			// 	speed: 150,
+			// 	gap: 100,
+			// 	delayBeforeStart: 0,
+			// 	direction: 'left',
+			// 	duplicated: true,
+			// 	pauseOnHover: true
+			// });
 		});
 	</script>
 <% end %>

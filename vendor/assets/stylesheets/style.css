@@ -995,6 +995,9 @@ a.text-very-light-gray-hover:hover {
 .bg-grey {
   background-color: #F0F0F0;
 }
+.bg-very-dark-grey {
+  background-color: var(--bs-dark);
+}
 .bg-extra-medium-grey {
   background-color: var(--grey-color);
 }
@@ -1923,6 +1926,8 @@ textarea.input-bg {
 .btn.btn-transparent-iec:hover,
 .btn.btn-transparent-iec:focus {
   background: transparent;
+  text-decoration: underline;
+  text-underline-offset: 8px;
   /*border-color: #fff !important;*/
   color: var(--dark-grey-color);
 }
@@ -1933,6 +1938,8 @@ textarea.input-bg {
 .btn.btn-line:hover,
 .btn.btn-line:focus {
   background: transparent;
+  text-decoration: underline;
+  text-underline-offset: 8px;
 }
 
 /* button rounded */
@@ -14628,6 +14635,10 @@ figure {
   opacity: 0.5;
   transform: scale(1.1, 1.1);
   transition: all 0.3s ease 0s;
+}
+.blog-post.blog-post-style1:hover .post-details a {
+  text-decoration: underline;
+  text-underline-offset: 8px;
 }
 
 /* blog post style 2 */
