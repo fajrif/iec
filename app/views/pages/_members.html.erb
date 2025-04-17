@@ -19,7 +19,7 @@
 						<!-- start portfolio item -->
 						<li class="grid-item <%= member.member_type.name_id %> text-start border-radius-8 wow animate__zoomIn">
 							<figure>
-									<div class="portfolio-img bg-black position-relative text-center overflow-hidden">
+									<div class="portfolio-img bg-dark-grey position-relative text-center overflow-hidden">
 										<a class="popup-with-zoom-anim" href="<%= "#modal-member-#{member.id}" %>">
 											<%= image_tag url_for(member.photo), class: "w-100 border-radius-8", alt: member.full_name %>
 										</a>

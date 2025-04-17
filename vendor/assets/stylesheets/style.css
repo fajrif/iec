@@ -11818,6 +11818,10 @@ header.sticky nav.navbar.brand-center ul.nav > li > a {
 .hover-option6 .grid-item figure:hover figcaption {
   cursor: default;
 }
+.hover-option6 .grid-item figure:hover figcaption span.text-large {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
 .hover-option6 .grid-item figure:hover .portfolio-img {
   transition: all 0.3s ease 0s;
   -webkit-transition: all 0.3s ease 0s;
