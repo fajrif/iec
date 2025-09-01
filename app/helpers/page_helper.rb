@@ -138,7 +138,7 @@ module PageHelper
 					end
 				else
 					_menu += content_tag(:li) do
-						link_to(menu["label"], menu["url"] ? menu["url"] : "#")
+            link_to(menu["label"], menu["url"] ? menu["url"] : "#", target: menu["target"] ? menu["target"] : "_self")
 					end
 				end
 			end

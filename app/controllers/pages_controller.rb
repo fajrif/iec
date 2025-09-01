@@ -11,11 +11,15 @@ class PagesController < ApplicationController
 			end
 
 			if @page = Page.friendly.find(_id)
-				@meta_title = @page.meta_title unless @page.meta_title.blank?
-				@meta_desc = @page.meta_description unless @page.meta_description.blank?
-				current_banner_section_style(@page.banner_section)
-				@banners = @page.banners
-				@sections = @page.sections
+        if @page.published?
+          @meta_title = @page.meta_title unless @page.meta_title.blank?
+          @meta_desc = @page.meta_description unless @page.meta_description.blank?
+          current_banner_section_style(@page.banner_section)
+          @banners = @page.banners
+          @sections = @page.sections
+        else
+          raise ActiveRecord::RecordNotFound
+        end
 			end
 
 		rescue ActiveRecord::RecordNotFound
