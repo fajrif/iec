@@ -150,7 +150,7 @@ module PageHelper
 		_menu = ""
 		data.each do |menu|
 			_menu += content_tag(:li, class: "d-inline-block margin-10px-right") do
-				link_to(menu["label"], menu["url"] ? menu["url"] : "#", class: "text-white-2")
+				link_to(menu["label"], menu["url"] ? menu["url"] : "#", class: "text-white-2", target: menu["target"] ? menu["target"] : "_self")
 			end
 		end
 		return _menu
