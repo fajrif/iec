@@ -14640,10 +14640,10 @@ figure {
   transform: scale(1.1, 1.1);
   transition: all 0.3s ease 0s;
 }
-.blog-post.blog-post-style1:hover .post-details a {
-  text-decoration: underline;
-  text-underline-offset: 8px;
-}
+/*.blog-post.blog-post-style1:hover .post-details a {*/
+  /*text-decoration: underline;*/
+  /*text-underline-offset: 8px;*/
+/*}*/
 
 /* blog post style 2 */
 .blog-post.blog-post-style2 .author img {
