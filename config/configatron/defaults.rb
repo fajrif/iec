@@ -25,6 +25,8 @@ configatron.default_banner = "banners/banner-indo-energy.png"
 configatron.admin_email = "info@indo-energy.com"
 configatron.no_reply_email = "no-reply@indo-energy.com"
 
+configatron.link_to_sec_filings = "https://www.sec.gov/cgi-bin/browse-edgar?company=Indonesia+energy+corp&match=starts-with&filenum=&State=&Country=&SIC=&myowner=exclude&action=getcompany"
+
 configatron.recaptcha_v3_secret_key = "6LexYfYpAAAAANXyt8e7XGJCZZ_bt6vzk_XAGf7u"
 configatron.recaptcha_v3_site_key = "6LexYfYpAAAAAI3_Nw7bX385NNlpoDFO4Jv8a732"
 configatron.recaptcha_v2_secret_key = "6LfTYfYpAAAAAP9BWoGnGZTdmwh-88LswOMbocYE"
