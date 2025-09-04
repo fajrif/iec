@@ -24,3 +24,8 @@ configatron.video_largest_solar_pv_youtube_url = '<iframe width="1680" height="6
 configatron.default_banner = "banners/banner-indo-energy.png"
 configatron.admin_email = "info@indo-energy.com"
 configatron.no_reply_email = "no-reply@indo-energy.com"
+
+configatron.recaptcha_v3_secret_key = "6LexYfYpAAAAANXyt8e7XGJCZZ_bt6vzk_XAGf7u"
+configatron.recaptcha_v3_site_key = "6LexYfYpAAAAAI3_Nw7bX385NNlpoDFO4Jv8a732"
+configatron.recaptcha_v2_secret_key = "6LfTYfYpAAAAAP9BWoGnGZTdmwh-88LswOMbocYE"
+configatron.recaptcha_v2_site_key = "6LfTYfYpAAAAACmdaaxRN7T0Yp5NxUN6iPJhIL9A"
