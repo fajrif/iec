@@ -71,7 +71,7 @@ en:
     back_to: "Back to %{object_name}"
     back_to_news: "Back to News"
     others: "Other %{object_name}"
-    others_news: "More News & Media"
+    others_news: "More Press Release"
     no_data_found: "No Data Found"
     download: "Download"
     download_now: "Download Now"
