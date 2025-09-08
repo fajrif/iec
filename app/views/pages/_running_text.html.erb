@@ -1,23 +1,7 @@
 <div class="container-fluid no-padding-lr bg-green">
-	<div class="scroll-box d-flex justify-content-center align-items-center text-start text-md-center">
-		<div class="marquee scroll-text text-white-2">
+	<div class="d-flex justify-content-center align-items-center text-center padding-two-tb sm-padding-four-tb">
+		<div class="title-medium text-white-2 font-weight-500">
       Powering Progress, Nurturing Nature: <br/>Our Energy, Your Future
 		</div>
 	</div>
 </div>
-
-<%= content_for :tail do %>
-	<%= javascript_include_tag "jquery.marquee.min.js" %>
-	<script>
-		jQuery(document).ready(function($){
-			// $('.marquee').marquee({
-			// 	speed: 150,
-			// 	gap: 100,
-			// 	delayBeforeStart: 0,
-			// 	direction: 'left',
-			// 	duplicated: true,
-			// 	pauseOnHover: true
-			// });
-		});
-	</script>
-<% end %>
